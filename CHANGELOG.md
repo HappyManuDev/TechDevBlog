@@ -1,33 +1,33 @@
 # Changelog
 
-*[Read in English](CHANGELOG.en.md)*
+*[Lire en français](CHANGELOG.fr.md)*
 
-Toutes les évolutions notables du thème sont documentées dans ce fichier.
+All notable changes to the theme are documented in this file.
 
-Le format s'inspire de [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/),
-et le thème suit le [Semantic Versioning](https://semver.org/lang/fr/).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this theme adheres to [Semantic Versioning](https://semver.org/).
 
 ## [1.0.0] - 2026-09-08
 
-Première publication publique du thème.
+First public release of the theme.
 
-### Ajouté
+### Added
 
-- Colonne latérale pilotable depuis Apparence > Widgets : le widget **Catégories TechDevBlog**
-  (compteurs dynamiques, style de carte assorti au thème) remplace le contenu autrefois codé en dur,
-  aux côtés de blocs HTML personnalisé pour « À propos » et « Ne manquez rien ».
-- Étiquettes de catégorie multiples sur l'image des articles (cartes de la grille et article mis en avant)
-  pour les articles associés à plusieurs catégories.
-- Badge « temps de lecture » repositionné en bas à gauche de l'image sur les cartes d'articles,
-  avec dégradé de lisibilité.
-- Sommaire d'article automatique et repliable (ancre sur chaque titre H2/H3), affiché sur les articles
-  comportant au moins deux titres.
+- Sidebar managed from Appearance > Widgets: the **TechDevBlog Categories** widget
+  (dynamic counts, card style matching the theme) replaces the previously hardcoded content,
+  alongside custom HTML blocks for "About" and "Don't miss out".
+- Multiple category badges on post images (grid cards and featured post)
+  for posts assigned to several categories.
+- "Reading time" badge repositioned to the bottom-left of the image on post cards,
+  with a readability gradient.
+- Automatic, collapsible table of contents (anchored on each H2/H3 heading), shown on posts
+  with at least two headings.
 
-### Corrigé
+### Fixed
 
-- Espacement entre les cartes de la colonne latérale, cassé par un conflit de spécificité CSS.
-- Alignement du compteur dans la liste des catégories (chiffre collé au texte).
-- Mise en page de la pagination incohérente entre la page d'accueil et les pages d'archive de catégorie,
-  causée par `sanitize_html_class()` qui supprimait les espaces d'une classe CSS multiple.
+- Spacing between sidebar cards, broken by a CSS specificity conflict.
+- Counter alignment in the category list (digit stuck to the text).
+- Inconsistent pagination layout between the homepage and category archive pages,
+  caused by `sanitize_html_class()` stripping spaces from a multi-class CSS attribute.
 
 [1.0.0]: https://github.com/DonCastor/TechDevBlog/releases/tag/v1.0.0

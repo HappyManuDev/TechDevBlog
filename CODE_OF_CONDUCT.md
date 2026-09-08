@@ -1,81 +1,81 @@
-# Code de conduite
+# Code of Conduct
 
-*[Read in English](CODE_OF_CONDUCT.en.md)*
+*[Lire en français](CODE_OF_CONDUCT.fr.md)*
 
-## Notre engagement
+## Our Pledge
 
-En tant que membres, contributeurs et responsables de ce projet, nous nous engageons à faire de la participation à notre communauté une expérience sans harcèlement pour tout le monde, quels que soient l'âge, la corpulence, le handicap visible ou invisible, l'origine ethnique, les caractéristiques sexuelles, l'identité et l'expression de genre, le niveau d'expérience, l'éducation, le statut socio-économique, la nationalité, l'apparence personnelle, la race, la religion, ou l'identité et l'orientation sexuelles.
+We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
-Nous nous engageons à agir et à interagir de manière à contribuer à une communauté ouverte, accueillante, diversifiée, inclusive et saine.
+We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.
 
-## Nos standards
+## Our Standards
 
-Exemples de comportements qui contribuent à un environnement positif :
+Examples of behavior that contributes to a positive environment for our community include:
 
-- Faire preuve d'empathie et de bienveillance envers les autres personnes.
-- Respecter les opinions, points de vue et expériences divergents.
-- Donner et accepter avec grâce des retours constructifs.
-- Assumer ses responsabilités, présenter ses excuses aux personnes affectées par nos erreurs, et tirer des leçons de l'expérience.
-- Se concentrer sur ce qui est le mieux non seulement pour nous en tant qu'individus, mais pour l'ensemble de la communauté.
+- Demonstrating empathy and kindness toward other people.
+- Being respectful of differing opinions, viewpoints, and experiences.
+- Giving and gracefully accepting constructive feedback.
+- Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience.
+- Focusing on what is best not just for us as individuals, but for the overall community.
 
-Exemples de comportements inacceptables :
+Examples of unacceptable behavior include:
 
-- L'utilisation d'un langage ou d'images à caractère sexuel, et toute forme d'attention ou d'avances sexuelles.
-- Le dénigrement, les insultes ou commentaires désobligeants, ainsi que les attaques personnelles ou politiques.
-- Le harcèlement, en public ou en privé.
-- La publication d'informations privées d'autrui, telles qu'une adresse postale ou électronique, sans autorisation explicite.
-- Toute autre conduite pouvant raisonnablement être considérée comme inappropriée dans un cadre professionnel.
+- The use of sexualized language or imagery, and sexual attention or advances of any kind.
+- Trolling, insulting or derogatory comments, and personal or political attacks.
+- Public or private harassment.
+- Publishing others' private information, such as a physical or email address, without their explicit permission.
+- Other conduct which could reasonably be considered inappropriate in a professional setting.
 
-## Responsabilités d'application
+## Enforcement Responsibilities
 
-Les mainteneurs du projet sont responsables de clarifier et de faire respecter nos standards de comportement acceptable. Ils prendront des mesures correctives appropriées et équitables en réponse à tout comportement qu'ils jugeraient inapproprié, menaçant, offensant ou nuisible.
+Project maintainers are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.
 
-Les mainteneurs du projet ont le droit et la responsabilité de supprimer, modifier ou rejeter les commentaires, commits, code, modifications du wiki, issues et autres contributions qui ne respectent pas ce Code de conduite, et communiqueront les raisons de leurs décisions de modération lorsque cela est approprié.
+Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned with this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.
 
-## Portée
+## Scope
 
-Ce Code de conduite s'applique à l'ensemble des espaces de ce dépôt (issues, pull requests, discussions, commentaires de code) ainsi qu'aux espaces publics lorsqu'une personne représente le projet ou sa communauté (par exemple via une adresse e-mail officielle ou un compte de réseau social dédié).
+This Code of Conduct applies within all spaces of this repository (issues, pull requests, discussions, code comments) and also applies when an individual is officially representing the project or its community in public spaces (for example, using an official project e-mail address or acting as an appointed representative on social media).
 
-## Application
+## Enforcement
 
-Les cas de comportement abusif, harcelant ou autrement inacceptable peuvent être signalés en ouvrant une [issue](https://github.com/DonCastor/TechDevBlog/issues) sur ce dépôt. Pour un signalement de nature sensible que vous ne souhaitez pas rendre public, vous pouvez contacter directement le mainteneur du dépôt via son profil GitHub ([@DonCastor](https://github.com/DonCastor)).
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by opening an [issue](https://github.com/DonCastor/TechDevBlog/issues) on this repository. For a sensitive report you would rather not make public, you can contact the repository maintainer directly through their GitHub profile ([@DonCastor](https://github.com/DonCastor)).
 
-Toutes les plaintes seront examinées et feront l'objet d'une enquête rapide et équitable.
+All complaints will be reviewed and investigated promptly and fairly.
 
-Tous les mainteneurs du projet sont tenus de respecter la vie privée et la sécurité de la personne à l'origine de tout signalement.
+All project maintainers are obligated to respect the privacy and security of the reporter of any incident.
 
-## Directives d'application
+## Enforcement Guidelines
 
-Les mainteneurs du projet suivront ces Lignes directrices d'impact communautaire pour déterminer les conséquences de toute action qu'ils jugeraient contraire à ce Code de conduite :
+Project maintainers will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:
 
 ### 1. Correction
 
-**Impact sur la communauté** : Utilisation d'un langage inapproprié ou tout autre comportement jugé non professionnel ou mal accueilli dans la communauté.
+**Community Impact**: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.
 
-**Conséquence** : Un avertissement écrit et privé de la part des mainteneurs, apportant des précisions sur la nature de la violation et une explication des raisons pour lesquelles le comportement était inapproprié. Des excuses publiques peuvent être demandées.
+**Consequence**: A private, written warning from maintainers, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.
 
-### 2. Avertissement
+### 2. Warning
 
-**Impact sur la communauté** : Une violation à travers un incident unique ou une série d'actions.
+**Community Impact**: A violation through a single incident or series of actions.
 
-**Conséquence** : Un avertissement assorti de conséquences pour tout comportement répété. Aucune interaction avec les personnes impliquées, y compris les interactions non sollicitées avec celles qui appliquent le Code de conduite, pendant une période déterminée. Cela inclut le fait d'éviter les interactions dans les espaces communautaires ainsi que sur les canaux externes comme les réseaux sociaux. Le non-respect de ces conditions peut entraîner un bannissement temporaire ou permanent.
+**Consequence**: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.
 
-### 3. Bannissement temporaire
+### 3. Temporary Ban
 
-**Impact sur la communauté** : Une violation grave des normes de la communauté, y compris un comportement inapproprié prolongé.
+**Community Impact**: A serious violation of community standards, including sustained inappropriate behavior.
 
-**Conséquence** : Un bannissement temporaire de toute forme d'interaction ou de communication publique avec la communauté pendant une période déterminée. Aucune interaction publique ou privée avec les personnes impliquées, y compris les interactions non sollicitées avec celles qui appliquent le Code de conduite, n'est autorisée pendant cette période. Le non-respect de ces conditions peut entraîner un bannissement permanent.
+**Consequence**: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.
 
-### 4. Bannissement permanent
+### 4. Permanent Ban
 
-**Impact sur la communauté** : Démonstration d'un schéma de violation des normes de la communauté, y compris un comportement inapproprié prolongé, du harcèlement envers une personne, ou de l'agressivité ou du dénigrement envers des groupes de personnes.
+**Community Impact**: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.
 
-**Conséquence** : Un bannissement permanent de toute forme d'interaction publique au sein de la communauté du projet.
+**Consequence**: A permanent ban from any sort of public interaction within the community.
 
 ## Attribution
 
-Ce Code de conduite est adapté du [Contributor Covenant](https://www.contributor-covenant.org), version 2.1, disponible à l'adresse https://www.contributor-covenant.org/fr/version/2/1/code_of_conduct.html.
+This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.1, available at https://www.contributor-covenant.org/version/2/1/code_of_conduct.html.
 
-Les Lignes directrices d'impact communautaire sont inspirées de [l'échelle d'application du code de conduite de Mozilla](https://github.com/mozilla/diversity).
+Community Impact Guidelines were inspired by [Mozilla's code of conduct enforcement ladder](https://github.com/mozilla/diversity).
 
-Pour des réponses aux questions courantes sur ce code de conduite, consultez la FAQ à l'adresse https://www.contributor-covenant.org/faq. Des traductions sont disponibles à l'adresse https://www.contributor-covenant.org/translations.
+For answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations.

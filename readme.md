@@ -1,58 +1,58 @@
 # TechDevBlog
 
-*[Read in English](readme.en.md)*
+*[Lire en français](readme.fr.md)*
 
-![Aperçu du thème TechDevBlog](screenshot.png)
+![TechDevBlog theme preview](screenshot.png)
 
-Un thème WordPress moderne, responsive et orienté lecture pour un blog technologique, propulsé par Tailwind CSS.
+A modern, responsive, reading-focused WordPress theme for a tech blog, powered by Tailwind CSS.
 
-## Fonctionnalités
+## Features
 
-- **Page d'accueil** : dernier article en hero, puis une grille de cartes (4 par défaut, filtrable via `techdevblog_home_cards`), avec pagination.
-- **Article** : sommaire automatique et repliable généré à partir des titres H2/H3, temps de lecture estimé, fil d'Ariane par catégories, étiquettes, navigation article précédent/suivant, commentaires imbriqués.
-- **Colonne latérale pilotable depuis Apparence > Widgets** : widget natif **Catégories TechDevBlog** (compteurs dynamiques) à combiner avec des blocs HTML personnalisé (ex. « À propos », « Ne manquez rien »).
-- **En-tête** : logo personnalisé, menu principal responsive avec menu mobile, recherche en volet déroulant.
-- **Pied de page** : menu dédié, liste des catégories, liens réseaux sociaux, mentions.
-- **Recherche, archives, 404** et gabarit de page génériques inclus.
-- Support du logo personnalisé, des images mises en avant, des flux RSS automatiques et de l'éditeur de blocs (embeds responsives, largeur alignée).
-- Thème traduisible (`Text Domain: techdevblog`).
+- **Homepage**: latest post as a hero, followed by a card grid (4 by default, filterable via `techdevblog_home_cards`), with pagination.
+- **Single post**: automatic, collapsible table of contents generated from H2/H3 headings, estimated reading time, category breadcrumbs, tags, previous/next post navigation, threaded comments.
+- **Sidebar managed from Appearance > Widgets**: built-in **TechDevBlog Categories** widget (dynamic counts) to combine with custom HTML blocks (e.g. "About", "Don't miss out").
+- **Header**: custom logo, responsive primary menu with a mobile menu, dropdown search panel.
+- **Footer**: dedicated menu, category list, social links, credits.
+- **Search, archive, and 404** templates, plus a generic page template.
+- Support for custom logo, featured images, automatic RSS feeds, and block editor features (responsive embeds, wide alignment).
+- Translation-ready theme (`Text Domain: techdevblog`).
 
-## Structure du thème
+## Theme structure
 
 ```
 techdevblog/
-├── assets/            Styles compilés (theme.css) et scripts (navigation.js)
-├── template-parts/    Gabarits de carte (content-card.php) et de hero (content-hero.php)
-├── functions.php      Réglages du thème, widget Catégories, helpers (sommaire, temps de lecture...)
+├── assets/            Compiled styles (theme.css) and scripts (navigation.js)
+├── template-parts/    Card (content-card.php) and hero (content-hero.php) templates
+├── functions.php      Theme setup, Categories widget, helpers (table of contents, reading time...)
 ├── header.php / footer.php / sidebar.php
 ├── front-page.php / single.php / page.php / archive.php / search.php / 404.php
-└── style.css           En-tête du thème (métadonnées WordPress)
+└── style.css           Theme header (WordPress metadata)
 ```
 
 ## Installation
 
-1. Copier le dossier `techdevblog` dans `wp-content/themes/`.
-2. Activer le thème depuis Apparence > Thèmes.
-3. Dans Apparence > Widgets, ajouter à la colonne latérale le widget **Catégories TechDevBlog** ainsi que des blocs HTML personnalisé pour « À propos » et « Ne manquez rien ».
-4. (Optionnel) Créer les menus **Menu Principal** et **Menu Pied de Page** dans Apparence > Menus.
+1. Copy the `techdevblog` folder into `wp-content/themes/`.
+2. Activate the theme from Appearance > Themes.
+3. In Appearance > Widgets, add the **TechDevBlog Categories** widget to the sidebar, along with custom HTML blocks for "About" and "Don't miss out".
+4. (Optional) Create the **Primary Menu** and **Footer Menu** in Appearance > Menus.
 
-## Prérequis
+## Requirements
 
-- WordPress 6.0 ou supérieur
-- PHP 7.4 ou supérieur
+- WordPress 6.0 or higher
+- PHP 7.4 or higher
 
-## Développement
+## Development
 
-En production, Tailwind est chargé via CDN par défaut (voir `functions.php`). Pour la mise en production, compiler Tailwind vers `assets/tailwind.css` et remplacer l'enqueue du CDN par ce fichier (voir le commentaire en tête de `style.css`).
+By default, Tailwind is loaded via CDN in production (see `functions.php`). For a production build, compile Tailwind to `assets/tailwind.css` and replace the CDN enqueue with that file (see the comment at the top of `style.css`).
 
 ## Changelog
 
-Voir [CHANGELOG.md](CHANGELOG.md) (*[English version](CHANGELOG.en.md)*).
+See [CHANGELOG.md](CHANGELOG.md) (*[version française](CHANGELOG.fr.md)*).
 
-## Code de conduite
+## Code of Conduct
 
-Voir [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) (*[English version](CODE_OF_CONDUCT.en.md)*).
+See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) (*[version française](CODE_OF_CONDUCT.fr.md)*).
 
-## Licence
+## License
 
-GNU General Public License v2 ou ultérieure. Voir [LICENSE](LICENSE).
+GNU General Public License v2 or later. See [LICENSE](LICENSE).
