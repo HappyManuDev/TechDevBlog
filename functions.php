@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'TECHDEVBLOG_VERSION' ) ) {
-	define( 'TECHDEVBLOG_VERSION', '1.4' );
+	define( 'TECHDEVBLOG_VERSION', '1.0.0' );
 }
 
 /**
