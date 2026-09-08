@@ -1,5 +1,7 @@
 # Changelog
 
+*[Read in English](CHANGELOG.en.md)*
+
 Toutes les évolutions notables du thème sont documentées dans ce fichier.
 
 Le format s'inspire de [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/),

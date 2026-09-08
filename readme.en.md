@@ -47,7 +47,11 @@ By default, Tailwind is loaded via CDN in production (see `functions.php`). For 
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md).
+See [CHANGELOG.en.md](CHANGELOG.en.md) (*[version française](CHANGELOG.md)*).
+
+## Code of Conduct
+
+See [CODE_OF_CONDUCT.en.md](CODE_OF_CONDUCT.en.md) (*[version française](CODE_OF_CONDUCT.md)*).
 
 ## License
 
