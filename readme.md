@@ -2,6 +2,8 @@
 
 *[Read in English](readme.en.md)*
 
+![Aperçu du thème TechDevBlog](screenshot.png)
+
 Un thème WordPress moderne, responsive et orienté lecture pour un blog technologique, propulsé par Tailwind CSS.
 
 ## Fonctionnalités
