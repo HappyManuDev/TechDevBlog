@@ -15,11 +15,14 @@ Tags: blog, two-columns, right-sidebar, custom-menu, featured-images, translatio
 */
 
 /* -------------------------------------------------------------------------
-   Tailwind est chargé via CDN (voir functions.php). Ce fichier ne contient
-   que ce que Tailwind ne couvre pas : les classes generees par le coeur de
-   WordPress et par l'editeur de blocs.
-   En production : compiler Tailwind vers assets/tailwind.css et remplacer
-   l'enqueue du CDN par ce fichier.
+   Les classes utilitaires Tailwind utilisees par les templates sont
+   compilees a la main dans assets/theme.css (voir functions.php pour son
+   enqueue) : pas de CDN ni de build Tailwind a l'execution. Ce fichier-ci ne
+   contient que ce que theme.css ne couvre pas : les classes generees par le
+   coeur de WordPress et par l'editeur de blocs.
+   Toute nouvelle classe Tailwind ajoutee dans un template doit avoir sa
+   regle ajoutee manuellement dans assets/theme.css, sinon elle est sans
+   effet.
    ---------------------------------------------------------------------- */
 
 .screen-reader-text {

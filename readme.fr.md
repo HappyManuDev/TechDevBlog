@@ -43,7 +43,7 @@ techdevblog/
 
 ## Développement
 
-En production, Tailwind est chargé via CDN par défaut (voir `functions.php`). Pour la mise en production, compiler Tailwind vers `assets/tailwind.css` et remplacer l'enqueue du CDN par ce fichier (voir le commentaire en tête de `style.css`).
+Tailwind n'est pas chargé à l'exécution : `assets/theme.css` est une feuille de style maintenue à la main, qui ne contient que les classes utilitaires réellement utilisées par les templates (voir le commentaire en tête de `style.css`). Quand une nouvelle classe utilitaire Tailwind est ajoutée dans un template, il faut ajouter la règle correspondante dans `assets/theme.css`, sinon elle n'a aucun effet.
 
 ## Changelog
 

@@ -43,7 +43,7 @@ techdevblog/
 
 ## Development
 
-By default, Tailwind is loaded via CDN in production (see `functions.php`). For a production build, compile Tailwind to `assets/tailwind.css` and replace the CDN enqueue with that file (see the comment at the top of `style.css`).
+Tailwind is not loaded at runtime: `assets/theme.css` is a hand-maintained stylesheet containing only the utility classes actually used by the templates (see the comment at the top of `style.css`). When you add a new Tailwind utility class to a template, add the matching rule to `assets/theme.css` as well, otherwise it has no effect.
 
 ## Changelog
 

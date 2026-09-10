@@ -72,6 +72,7 @@ main{display:block}
 .bg-indigo-600{background-color:#4f46e5}
 .bg-slate-100{background-color:#f1f5f9}
 .bg-slate-200{background-color:#e2e8f0}
+.bg-slate-50{background-color:#f8fafc}
 .bg-slate-800{background-color:#1e293b}
 .bg-slate-900{background-color:#0f172a}
 .bg-slate-900\/60{background-color:rgba(15,23,42,.6)}
@@ -103,6 +104,7 @@ main{display:block}
 .font-bold{font-weight:700}
 .font-extrabold{font-weight:800}
 .font-medium{font-weight:500}
+.font-sans{font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif}
 .font-semibold{font-weight:600}
 .gap-1\.5{gap:.375rem}
 .gap-10{gap:2.5rem}
@@ -164,6 +166,7 @@ main{display:block}
 .mb-4{margin-bottom:1rem}
 .mb-6{margin-bottom:1.5rem}
 .mb-8{margin-bottom:2rem}
+.min-h-screen{min-height:100vh}
 .mt-10{margin-top:2.5rem}
 .mt-12{margin-top:3rem}
 .mt-14{margin-top:3.5rem}
