@@ -24,12 +24,23 @@
 
 	<div class="absolute bottom-0 left-0 right-0 p-6 md:p-10 z-20">
 		<?php
-		$techdevblog_cats = get_the_category();
-		if ( ! empty( $techdevblog_cats ) ) :
+		$techdevblog_cats       = get_the_category();
+		$techdevblog_cats_shown = array_slice( $techdevblog_cats, 0, 2 );
+		$techdevblog_cats_more  = count( $techdevblog_cats ) - count( $techdevblog_cats_shown );
+		if ( ! empty( $techdevblog_cats_shown ) ) :
 			?>
-			<span class="inline-block px-3 py-1 bg-indigo-500 text-white text-sm font-semibold rounded-full mb-4">
-				<?php echo esc_html( $techdevblog_cats[0]->name ); ?>
-			</span>
+			<div class="flex flex-wrap gap-2 mb-4">
+				<?php foreach ( $techdevblog_cats_shown as $techdevblog_cat ) : ?>
+					<span class="inline-block px-3 py-1 bg-indigo-500 text-white text-sm font-semibold rounded-full">
+						<?php echo esc_html( $techdevblog_cat->name ); ?>
+					</span>
+				<?php endforeach; ?>
+				<?php if ( $techdevblog_cats_more > 0 ) : ?>
+					<span class="inline-block px-3 py-1 bg-white/20 text-white text-sm font-semibold rounded-full">
+						+<?php echo esc_html( $techdevblog_cats_more ); ?>
+					</span>
+				<?php endif; ?>
+			</div>
 		<?php endif; ?>
 
 		<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight text-balance">
