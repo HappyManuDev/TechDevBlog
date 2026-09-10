@@ -8,7 +8,7 @@ A modern, responsive, reading-focused WordPress theme for a tech blog, powered b
 
 ## Features
 
-- **Homepage**: latest post as a hero, followed by a card grid (4 by default, filterable via `techdevblog_home_cards`), with pagination.
+- **Homepage**: latest post as a hero, followed by a card grid (6 by default, filterable via `techdevblog_home_cards`), with pagination. The pattern repeats on every page.
 - **Single post**: automatic, collapsible table of contents generated from H2/H3 headings, estimated reading time, category breadcrumbs, tags, previous/next post navigation, threaded comments.
 - **Sidebar managed from Appearance > Widgets**: built-in **TechDevBlog Categories** widget (dynamic counts) to combine with custom HTML blocks (e.g. "About", "Don't miss out").
 - **Header**: custom logo, responsive primary menu with a mobile menu, dropdown search panel.

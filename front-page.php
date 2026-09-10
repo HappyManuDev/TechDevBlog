@@ -4,9 +4,11 @@
  *
  * Ce modele est utilise pour la page d'accueil dans les deux cas de figure
  * (Reglages > Lecture : "Vos derniers articles" ou "Une page statique"), il
- * impose donc toujours la meme mise en page : le dernier article en hero,
- * puis exactement techdevblog_home_cards() cartes (4 par defaut) en grille
- * deux colonnes, puis la pagination.
+ * impose donc toujours la meme mise en page : le premier article de la page
+ * en hero, puis exactement techdevblog_home_cards() cartes (6 par defaut) en
+ * grille deux colonnes, puis la pagination. Ce motif se repete sur chaque
+ * page (le hero de la page 2 est le premier article qui suit ceux de la
+ * page 1, etc.) : la grille compte ainsi toujours un nombre pair de cartes.
  *
  * Le nombre de cartes ne suit pas Reglages > Lecture : il est fixe par le
  * theme pour respecter la maquette (filtre 'techdevblog_home_cards').
@@ -34,9 +36,10 @@ $techdevblog_home = new WP_Query(
 $techdevblog_items = $techdevblog_home->posts;
 $techdevblog_hero  = null;
 
-// Le hero n'apparait que sur la premiere page ; les autres pages affichent
-// une grille pleine de techdevblog_home_cards() + 1 cartes.
-if ( 1 === $techdevblog_paged && ! empty( $techdevblog_items ) ) {
+// Le premier article de chaque page passe en hero, les techdevblog_home_cards()
+// suivants forment la grille : la grille garde ainsi un nombre pair de cartes
+// sur toutes les pages, pas seulement la premiere.
+if ( ! empty( $techdevblog_items ) ) {
 	$techdevblog_hero  = $techdevblog_items[0];
 	$techdevblog_items = array_slice( $techdevblog_items, 1, techdevblog_home_cards() );
 }

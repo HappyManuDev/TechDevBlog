@@ -244,7 +244,7 @@ add_action( 'pre_get_posts', 'techdevblog_front_page_paging' );
  * @return int
  */
 function techdevblog_home_cards() {
-	return (int) apply_filters( 'techdevblog_home_cards', 4 );
+	return (int) apply_filters( 'techdevblog_home_cards', 6 );
 }
 
 /**

@@ -8,7 +8,7 @@ Un thème WordPress moderne, responsive et orienté lecture pour un blog technol
 
 ## Fonctionnalités
 
-- **Page d'accueil** : dernier article en hero, puis une grille de cartes (4 par défaut, filtrable via `techdevblog_home_cards`), avec pagination.
+- **Page d'accueil** : dernier article en hero, puis une grille de cartes (6 par défaut, filtrable via `techdevblog_home_cards`), avec pagination. Ce motif se répète sur chaque page.
 - **Article** : sommaire automatique et repliable généré à partir des titres H2/H3, temps de lecture estimé, fil d'Ariane par catégories, étiquettes, navigation article précédent/suivant, commentaires imbriqués.
 - **Colonne latérale pilotable depuis Apparence > Widgets** : widget natif **Catégories TechDevBlog** (compteurs dynamiques) à combiner avec des blocs HTML personnalisé (ex. « À propos », « Ne manquez rien »).
 - **En-tête** : logo personnalisé, menu principal responsive avec menu mobile, recherche en volet déroulant.
