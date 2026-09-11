@@ -188,6 +188,14 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
   margin: 0 0 1rem;
   line-height: 1.3;
 }
+/* Rend la main aux classes de couleur de texte (ex. text-white) dans un
+   bloc HTML personnalise de la colonne laterale (ex. la carte "Ne manquez
+   rien" en fond indigo) : ".widget h2/h3" et ".widget p" ci-dessus ont une
+   specificite (classe + element) plus forte qu'une simple classe utilitaire
+   (".text-white"), qui perdrait sinon systematiquement. */
+.widget .text-white { color: #fff; }
+.widget .text-indigo-100 { color: #e0e7ff; }
+.widget .text-indigo-200 { color: #c7d2fe; }
 .widget ul,
 .widget ol { list-style: none; margin: 0; padding: 0; }
 .widget li {
@@ -206,6 +214,13 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
 .widget a:hover { color: #4f46e5; }
 .widget p { font-size: 0.875rem; line-height: 1.65; color: #475569; margin: 0 0 0.75rem; }
 .widget p:last-child { margin-bottom: 0; }
+/* Meme conflit de specificite que pour les couleurs ci-dessus : le
+   "margin: 0 ..." de ".widget p" fixe aussi la marge haute a 0, ce qui
+   annule un eventuel mt-3/mt-4 porte par le paragraphe lui-meme (ex. le
+   texte "Pas de spam, promis." sous le bouton de la carte "Ne manquez
+   rien", colle au bouton sans cette regle). */
+.widget .mt-3 { margin-top: 0.75rem; }
+.widget .mt-4 { margin-top: 1rem; }
 .widget .post-date,
 .widget .rss-date,
 .widget .comment-author-link { font-size: 0.75rem; color: #94a3b8; }
@@ -236,6 +251,19 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
 .widget .wp-block-search__button:hover,
 .widget input[type="submit"]:hover,
 .widget button[type="submit"]:hover { background: #4338ca; }
+/* Meme conflit de specificite que ci-dessus, pour le bouton de la carte
+   "Ne manquez rien" (fond indigo plein) : un bouton blanc se confondait
+   avec le champ email juste au-dessus (les deux pleine largeur, blancs,
+   empiles). Un indigo plus fonce que le fond de la carte le distingue a la
+   fois du champ et de la carte, en reutilisant des teintes deja presentes
+   dans le theme (indigo-700 = survol du bouton "S'abonner" du header ;
+   #3730a3 = survol de plusieurs liens et ::selection). Cible encore la
+   classe bg-slate-900 du bloc HTML existant (widget gere depuis Apparence >
+   Widgets, hors de ce depot) plutot que sa couleur litterale. */
+.widget button[type="submit"].bg-slate-900,
+.widget input[type="submit"].bg-slate-900 { background: #4338ca; color: #fff; }
+.widget button[type="submit"].bg-slate-900:hover,
+.widget input[type="submit"].bg-slate-900:hover { background: #3730a3; }
 .widget .wp-block-search__inside-wrapper { display: flex; gap: 0.5rem; }
 .widget .wp-block-latest-posts__post-title { font-weight: 500; color: #334155; }
 .widget .wp-block-latest-posts__post-date { font-size: 0.75rem; color: #94a3b8; }
