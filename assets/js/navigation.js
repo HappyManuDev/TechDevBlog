@@ -1,5 +1,5 @@
 /**
- * Menu mobile et panneau de recherche.
+ * Menu mobile, panneau de recherche et bouton "haut de page" des articles.
  */
 ( function () {
 	'use strict';
@@ -46,5 +46,19 @@
 				}
 			}
 		);
+
+		var backToTop = document.getElementById( 'back-to-top' );
+		if ( backToTop ) {
+			var updateVisibility = function () {
+				backToTop.classList.toggle( 'is-visible', window.scrollY > 600 );
+			};
+			updateVisibility();
+			window.addEventListener( 'scroll', updateVisibility, { passive: true } );
+
+			backToTop.addEventListener( 'click', function () {
+				var reduceMotion = window.matchMedia( '(prefers-reduced-motion: reduce)' ).matches;
+				window.scrollTo( { top: 0, behavior: reduceMotion ? 'auto' : 'smooth' } );
+			} );
+		}
 	} );
 } )();
