@@ -7,6 +7,23 @@ All notable changes to the theme are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this theme adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.0] - 2026-09-15
+
+### Added
+
+- Featured post (hero) now shown on every page of the homepage, not just the first,
+  so pagination no longer breaks into an uneven, hero-less grid.
+- Number of articles per page increased from 4 to 6, applied uniformly across all pages.
+- Hero category badges capped at 2, with a "+N" indicator for posts assigned to more.
+- "Back to top" button on single posts, appearing after scrolling and smooth-scrolling
+  back to the top of the article (respects reduced-motion preference).
+
+### Fixed
+
+- Newsletter sidebar widget ("Don't miss out"): text and button contrast against its
+  indigo background, and spacing between the submit button and the fine print below it,
+  both broken by `.widget` default styles overriding the widget's utility classes.
+
 ## [1.0.0] - 2026-09-08
 
 First public release of the theme.
@@ -30,4 +47,5 @@ First public release of the theme.
 - Inconsistent pagination layout between the homepage and category archive pages,
   caused by `sanitize_html_class()` stripping spaces from a multi-class CSS attribute.
 
+[1.1.0]: https://github.com/HappyManuDev/TechDevBlog/releases/tag/v1.1.0
 [1.0.0]: https://github.com/DonCastor/TechDevBlog/releases/tag/v1.0.0
