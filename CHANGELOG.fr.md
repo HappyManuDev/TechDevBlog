@@ -7,6 +7,17 @@ Toutes les évolutions notables du thème sont documentées dans ce fichier.
 Le format s'inspire de [Keep a Changelog](https://keepachangelog.com/fr/1.0.0/),
 et le thème suit le [Semantic Versioning](https://semver.org/lang/fr/).
 
+## [Non publié]
+
+### Ajouté
+
+- Le bandeau d'archive de catégorie affiche désormais l'image de la catégorie en fond
+  lorsqu'elle est définie via le plugin optionnel
+  [Categories Images](https://wordpress.org/plugins/categories-images/), avec un voile sombre
+  en dégradé pour garder le texte lisible. Sans le plugin (ou sans image définie pour la
+  catégorie), le bandeau garde son allure de carte simple — aucune dépendance obligatoire
+  au plugin.
+
 ## [1.1.0] - 2026-09-15
 
 ### Ajouté

@@ -434,3 +434,42 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
 @media (min-width: 640px) {
   .back-to-top { right: 2rem; bottom: 2rem; }
 }
+
+/* -------------------------------------------------------------------------
+   Bandeau d'archive de categorie (archive.php). Le gabarit (marge, padding,
+   coins arrondis) est identique qu'il y ait ou non une image de categorie
+   (plugin "Categories Images"), pour eviter un changement brutal de forme
+   et de hauteur en naviguant d'une categorie a l'autre : seule l'habillage
+   change (fond blanc/texte fonce sans image, photo + voile sombre/texte
+   blanc avec image).
+   ---------------------------------------------------------------------- */
+.archive-header {
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .archive-header { padding: 3rem; }
+}
+.archive-header.has-image {
+  position: relative;
+  overflow: hidden;
+  border-color: transparent;
+  background-size: cover;
+  background-position: center;
+}
+.archive-header.has-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, .3), rgba(15, 23, 42, .85));
+}
+.archive-header.has-image > * {
+  position: relative;
+  z-index: 1;
+}
+.archive-header.has-image .text-indigo-600 { color: #c7d2fe; }
+.archive-header.has-image h1,
+.archive-header.has-image .text-slate-600 { color: #fff; }

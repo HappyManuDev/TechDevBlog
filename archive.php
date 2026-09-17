@@ -6,10 +6,23 @@
  */
 
 get_header();
+
+// Image de la categorie consultee (plugin "Categories Images"), affichee en
+// fond du bandeau d'archive uniquement si elle est definie pour cette
+// categorie ; sinon le bandeau garde son fond blanc habituel.
+$techdevblog_archive_image = '';
+if ( is_category() && function_exists( 'z_taxonomy_image_url' ) ) {
+	$techdevblog_archive_image = z_taxonomy_image_url( get_queried_object_id(), 'full' );
+}
 ?>
 
 <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-	<header class="mb-10 pb-6 border-b border-slate-200">
+	<header
+		class="archive-header<?php echo $techdevblog_archive_image ? ' has-image' : ''; ?>"
+		<?php if ( $techdevblog_archive_image ) : ?>
+			style="background-image:url('<?php echo esc_url( $techdevblog_archive_image ); ?>');"
+		<?php endif; ?>
+	>
 		<p class="text-sm font-bold uppercase tracking-wider text-indigo-600 mb-2">
 			<?php
 			if ( is_category() ) {
@@ -24,7 +37,7 @@ get_header();
 			?>
 		</p>
 		<h1 class="text-3xl md:text-4xl font-bold text-slate-900"><?php the_archive_title(); ?></h1>
-		<?php the_archive_description( '<div class="mt-4 text-slate-600 max-w-2xl">', '</div>' ); ?>
+		<?php the_archive_description( '<div class="mt-4 text-slate-600 max-w-3xl">', '</div>' ); ?>
 	</header>
 
 	<div class="flex flex-col lg:flex-row gap-10">
