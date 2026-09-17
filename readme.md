@@ -13,7 +13,7 @@ A modern, responsive, reading-focused WordPress theme for a tech blog, powered b
 - **Sidebar managed from Appearance > Widgets**: built-in **TechDevBlog Categories** widget (dynamic counts) to combine with custom HTML blocks (e.g. "About", "Don't miss out").
 - **Header**: custom logo, responsive primary menu with a mobile menu, dropdown search panel.
 - **Footer**: dedicated menu, category list, social links, credits.
-- **Search, archive, and 404** templates, plus a generic page template.
+- **Search, archive, and 404** templates, plus a generic page template. Category archives display the category's image (if set via the [Categories Images](https://wordpress.org/plugins/categories-images/) plugin) as a banner background; without that plugin (or without an image set), the banner falls back to a plain card.
 - Support for custom logo, featured images, automatic RSS feeds, and block editor features (responsive embeds, wide alignment).
 - Translation-ready theme (`Text Domain: techdevblog`).
 
@@ -40,6 +40,7 @@ techdevblog/
 
 - WordPress 6.0 or higher
 - PHP 7.4 or higher
+- (Optional) [Categories Images](https://wordpress.org/plugins/categories-images/) plugin, to set an image per category and have it displayed on that category's archive banner (`archive.php` calls `z_taxonomy_image_url()` only if the plugin is active, so the theme works without it).
 
 ## Development
 

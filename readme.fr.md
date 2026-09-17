@@ -13,7 +13,7 @@ Un thème WordPress moderne, responsive et orienté lecture pour un blog technol
 - **Colonne latérale pilotable depuis Apparence > Widgets** : widget natif **Catégories TechDevBlog** (compteurs dynamiques) à combiner avec des blocs HTML personnalisé (ex. « À propos », « Ne manquez rien »).
 - **En-tête** : logo personnalisé, menu principal responsive avec menu mobile, recherche en volet déroulant.
 - **Pied de page** : menu dédié, liste des catégories, liens réseaux sociaux, mentions.
-- **Recherche, archives, 404** et gabarit de page génériques inclus.
+- **Recherche, archives, 404** et gabarit de page génériques inclus. Les pages d'archive de catégorie affichent l'image de la catégorie (si définie via le plugin [Categories Images](https://wordpress.org/plugins/categories-images/)) en fond du bandeau ; sans ce plugin (ou sans image définie), le bandeau reste une simple carte.
 - Support du logo personnalisé, des images mises en avant, des flux RSS automatiques et de l'éditeur de blocs (embeds responsives, largeur alignée).
 - Thème traduisible (`Text Domain: techdevblog`).
 
@@ -40,6 +40,7 @@ techdevblog/
 
 - WordPress 6.0 ou supérieur
 - PHP 7.4 ou supérieur
+- (Optionnel) Le plugin [Categories Images](https://wordpress.org/plugins/categories-images/), pour définir une image par catégorie et l'afficher sur le bandeau d'archive de cette catégorie (`archive.php` n'appelle `z_taxonomy_image_url()` que si le plugin est actif, le thème fonctionne donc sans).
 
 ## Développement
 

@@ -7,6 +7,16 @@ All notable changes to the theme are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this theme adheres to [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Added
+
+- Category archive banner now displays that category's image as a background when one is
+  set via the optional [Categories Images](https://wordpress.org/plugins/categories-images/)
+  plugin, with a dark gradient overlay for text contrast. Without the plugin (or without an
+  image set for the category), the banner falls back to its plain card look — no hard
+  dependency on the plugin.
+
 ## [1.1.0] - 2026-09-15
 
 ### Added
