@@ -1,6 +1,6 @@
 <?php
 /**
- * TechDevBlog - fonctions et definitions du theme.
+ * TechDevBlog - theme functions and definitions.
  *
  * @package techdevblog
  */
@@ -14,30 +14,30 @@ if ( ! defined( 'TECHDEVBLOG_VERSION' ) ) {
 }
 
 /**
- * Reglages de base du theme.
+ * Basic theme setup.
  */
 function techdevblog_setup() {
-	// Traductions.
+	// Translations.
 	load_theme_textdomain( 'techdevblog', get_template_directory() . '/languages' );
 
-	// Balise <title> geree par WordPress.
+	// <title> tag handled by WordPress.
 	add_theme_support( 'title-tag' );
 
-	// Images mises en avant.
+	// Featured images.
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 1200, 630, true );
 	add_image_size( 'techdevblog-card', 720, 420, true );
 
-	// Flux RSS automatiques.
+	// Automatic RSS feeds.
 	add_theme_support( 'automatic-feed-links' );
 
-	// Balisage HTML5 pour les elements generes par le coeur.
+	// HTML5 markup for core-generated elements.
 	add_theme_support(
 		'html5',
 		array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script' )
 	);
 
-	// Logo personnalise.
+	// Custom logo.
 	add_theme_support(
 		'custom-logo',
 		array(
@@ -48,11 +48,11 @@ function techdevblog_setup() {
 		)
 	);
 
-	// Support editeur de blocs.
+	// Block editor support.
 	add_theme_support( 'responsive-embeds' );
 	add_theme_support( 'align-wide' );
 
-	// Emplacements de menus.
+	// Menu locations.
 	register_nav_menus(
 		array(
 			'primary' => __( 'Menu Principal', 'techdevblog' ),
@@ -63,7 +63,7 @@ function techdevblog_setup() {
 add_action( 'after_setup_theme', 'techdevblog_setup' );
 
 /**
- * Largeur de contenu utilisee par les embeds.
+ * Content width used by embeds.
  */
 function techdevblog_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'techdevblog_content_width', 800 );
@@ -71,13 +71,13 @@ function techdevblog_content_width() {
 add_action( 'after_setup_theme', 'techdevblog_content_width', 0 );
 
 /**
- * Zone de widgets de la colonne laterale.
+ * Sidebar widget area.
  *
- * Chaque widget porte son propre habillage de carte (voir le widget
- * "Categories TechDevBlog" ci-dessous et les blocs HTML personnalise
- * fournis pour "A propos" et "Ne manquez rien") : le wrapper de la zone
- * reste volontairement neutre pour ne pas imposer un style unique
- * (ex. la carte newsletter est indigo, pas blanche).
+ * Each widget carries its own card styling (see the "TechDevBlog
+ * Categories" widget below and the custom HTML blocks provided for
+ * "About" and "Don't miss out"): the area's wrapper stays deliberately
+ * neutral so it doesn't force a single style (e.g. the newsletter card
+ * is indigo, not white).
  */
 function techdevblog_widgets_init() {
 	register_sidebar(
@@ -95,12 +95,12 @@ function techdevblog_widgets_init() {
 add_action( 'widgets_init', 'techdevblog_widgets_init' );
 
 /**
- * Widget "Catégories TechDevBlog".
+ * "TechDevBlog Categories" widget.
  *
- * Reproduit le rendu (icone, compteurs, style de carte) qui etait code en
- * dur dans sidebar.php, tout en restant pilotable depuis Apparence >
- * Widgets : la liste reste dynamique (comptes de categories a jour), mais
- * le widget peut etre ajoute, retire ou reordonne sans toucher au code.
+ * Reproduces the rendering (icon, counts, card styling) that used to be
+ * hardcoded in sidebar.php, while staying manageable from Appearance >
+ * Widgets: the list stays dynamic (up-to-date category counts), but the
+ * widget can be added, removed or reordered without touching the code.
  */
 class TechDevBlog_Categories_Widget extends WP_Widget {
 
@@ -185,7 +185,7 @@ class TechDevBlog_Categories_Widget extends WP_Widget {
 }
 
 /**
- * Enregistrement du widget "Catégories TechDevBlog".
+ * Registers the "TechDevBlog Categories" widget.
  */
 function techdevblog_register_widgets() {
 	register_widget( 'TechDevBlog_Categories_Widget' );
@@ -193,23 +193,23 @@ function techdevblog_register_widgets() {
 add_action( 'widgets_init', 'techdevblog_register_widgets' );
 
 /**
- * Feuilles de style et scripts.
+ * Styles and scripts.
  */
 function techdevblog_scripts() {
-	// Feuille compilee du theme : reset + utilitaires reellement utilises par les
-	// modeles. Aucune dependance externe a l'execution (pas de CDN Tailwind).
+	// Compiled theme stylesheet: reset + utilities actually used by the
+	// templates. No runtime external dependency (no Tailwind CDN).
 	wp_enqueue_style( 'techdevblog-theme', get_theme_file_uri( '/assets/theme.css' ), array(), TECHDEVBLOG_VERSION );
 
-	// Police.
+	// Font.
 	wp_enqueue_style( 'techdevblog-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap', array(), null );
 
-	// Feuille du theme (metadonnees + classes du coeur WordPress).
+	// Theme stylesheet (metadata + WordPress core classes).
 	wp_enqueue_style( 'techdevblog-style', get_stylesheet_uri(), array(), TECHDEVBLOG_VERSION );
 
-	// Menu mobile.
+	// Mobile menu.
 	wp_enqueue_script( 'techdevblog-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array(), TECHDEVBLOG_VERSION, true );
 
-	// Reponses aux commentaires imbriquees.
+	// Threaded comment replies.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -217,12 +217,12 @@ function techdevblog_scripts() {
 add_action( 'wp_enqueue_scripts', 'techdevblog_scripts' );
 
 /**
- * Autorise la pagination /page/N/ quand la page d'accueil est une page statique.
+ * Allows /page/N/ pagination when the homepage is a static page.
  *
- * Sans cela, WordPress interprete /page/2/ comme une pagination de contenu de
- * page (nextpage) au lieu d'une pagination de la liste d'articles.
+ * Without this, WordPress interprets /page/2/ as page content pagination
+ * (nextpage) instead of post listing pagination.
  *
- * @param WP_Query $query Requete.
+ * @param WP_Query $query The query.
  */
 function techdevblog_front_page_paging( $query ) {
 	if ( is_admin() || ! $query->is_main_query() ) {
@@ -239,7 +239,7 @@ function techdevblog_front_page_paging( $query ) {
 add_action( 'pre_get_posts', 'techdevblog_front_page_paging' );
 
 /**
- * Nombre de cartes d'articles affichees sous le hero sur la page d'accueil.
+ * Number of post cards shown below the hero on the homepage.
  *
  * @return int
  */
@@ -248,12 +248,12 @@ function techdevblog_home_cards() {
 }
 
 /**
- * Liens de menu utilises quand aucun menu n'est affecte a un emplacement.
+ * Menu links used when no menu is assigned to a location.
  *
- * On n'affiche que des liens reels : les categories existantes du site.
- * Des qu'un menu est cree dans Apparence > Menus, il remplace cette liste.
+ * Only real links are shown: the site's existing categories. As soon as
+ * a menu is created in Appearance > Menus, it replaces this list.
  *
- * @return array Tableau de tableaux { label, url }.
+ * @return array Array of { label, url } arrays.
  */
 function techdevblog_menu_fallback_items() {
 	$items      = array();
@@ -277,7 +277,7 @@ function techdevblog_menu_fallback_items() {
 }
 
 /**
- * Longueur des extraits.
+ * Excerpt length.
  */
 function techdevblog_excerpt_length( $length ) {
 	return 28;
@@ -285,7 +285,7 @@ function techdevblog_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'techdevblog_excerpt_length' );
 
 /**
- * Suffixe des extraits.
+ * Excerpt suffix.
  */
 function techdevblog_excerpt_more( $more ) {
 	return '&hellip;';
@@ -293,7 +293,7 @@ function techdevblog_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'techdevblog_excerpt_more' );
 
 /**
- * Classes utilitaires ajoutees aux liens de pagination.
+ * Utility classes added to pagination links.
  */
 function techdevblog_the_posts_pagination() {
 	the_posts_pagination(
@@ -308,10 +308,10 @@ function techdevblog_the_posts_pagination() {
 }
 
 /**
- * Temps de lecture estime d'un article.
+ * Estimated reading time for a post.
  *
- * @param int|null $post_id Identifiant de l'article.
- * @return int Nombre de minutes (minimum 1).
+ * @param int|null $post_id Post ID.
+ * @return int Number of minutes (minimum 1).
  */
 function techdevblog_reading_time( $post_id = null ) {
 	$post_id = $post_id ? $post_id : get_the_ID();
@@ -321,15 +321,15 @@ function techdevblog_reading_time( $post_id = null ) {
 }
 
 /**
- * Retire le badge "temps de lecture" insere par le plugin de lecture (les
- * elements portant une classe contenant "reading-time") d'un extrait ou
- * d'un contenu HTML.
+ * Strips the "reading time" badge inserted by the reading-time plugin
+ * (elements carrying a class containing "reading-time") from an excerpt
+ * or HTML content.
  *
- * Sert a afficher un extrait propre dans les cartes et le hero : le temps
- * de lecture y est deja affiche separement via techdevblog_reading_time().
+ * Used to display a clean excerpt on cards and the hero: reading time is
+ * already shown separately there via techdevblog_reading_time().
  *
- * @param string $html Extrait ou contenu HTML (avant tout strip de balises).
- * @return string Le HTML nettoye du badge, ou tel quel si rien a nettoyer.
+ * @param string $html Excerpt or HTML content (before any tag stripping).
+ * @return string The HTML with the badge removed, or unchanged if there was nothing to clean.
  */
 function techdevblog_strip_reading_time_badge( $html ) {
 	if ( false === strpos( $html, 'reading-time' ) ) {
@@ -370,20 +370,20 @@ function techdevblog_strip_reading_time_badge( $html ) {
 }
 
 /**
- * Extrait les titres (H2/H3) d'un contenu d'article deja filtre et leur
- * associe une ancre, pour construire un sommaire cliquable en tete
- * d'article (voir single.php).
+ * Extracts the headings (H2/H3) from already-filtered post content and
+ * gives each one an anchor, to build a clickable table of contents at
+ * the top of a post (see single.php).
  *
- * Attend du contenu deja passe par le filtre 'the_content' (blocs rendus,
- * shortcodes executes, etc. -- typiquement le resultat de
- * apply_filters( 'the_content', get_the_content() )), et renvoie ce meme
- * contenu avec un id="..." ajoute sur chaque titre H2/H3, accompagne de la
- * structure du sommaire (H3 imbriques sous leur H2 precedent).
+ * Expects content already passed through the 'the_content' filter
+ * (blocks rendered, shortcodes executed, etc. -- typically the result of
+ * apply_filters( 'the_content', get_the_content() )), and returns that
+ * same content with an id="..." added to each H2/H3 heading, along with
+ * the table-of-contents structure (H3s nested under their preceding H2).
  *
- * @param string $content Contenu HTML deja filtre.
+ * @param string $content Already-filtered HTML content.
  * @return array {
- *     @type string $content  Contenu HTML avec ancres ajoutees sur les titres.
- *     @type array  $headings Structure du sommaire : liste de
+ *     @type string $content  HTML content with anchors added to headings.
+ *     @type array  $headings Table-of-contents structure: list of
  *                             { level, id, text, children }.
  * }
  */
@@ -406,8 +406,8 @@ function techdevblog_prepare_content_with_toc( $content ) {
 
 	$xpath = new DOMXPath( $dom );
 
-	// Pre-remplit les ancres deja presentes dans le contenu (ex : une note de
-	// bas de page) pour ne jamais entrer en collision avec elles.
+	// Pre-fills anchors already present in the content (e.g. a footnote)
+	// so we never collide with them.
 	$used_slugs = array();
 	foreach ( $xpath->query( '//*[@id]' ) as $existing ) {
 		$used_slugs[ $existing->getAttribute( 'id' ) ] = true;
@@ -471,11 +471,11 @@ function techdevblog_prepare_content_with_toc( $content ) {
 }
 
 /**
- * Rendu d'un commentaire.
+ * Renders a single comment.
  *
- * @param WP_Comment $comment Commentaire.
+ * @param WP_Comment $comment The comment.
  * @param array      $args    Arguments.
- * @param int        $depth   Profondeur.
+ * @param int        $depth   Depth.
  */
 function techdevblog_comment( $comment, $args, $depth ) {
 	$tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
@@ -511,5 +511,5 @@ function techdevblog_comment( $comment, $args, $depth ) {
 			</div>
 		</article>
 	<?php
-	// La balise fermante est ajoutee par wp_list_comments().
+	// The closing tag is added by wp_list_comments().
 }

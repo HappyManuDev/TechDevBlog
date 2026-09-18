@@ -1,6 +1,6 @@
 <?php
 /**
- * Pied de page du site.
+ * Site footer.
  *
  * @package techdevblog
  */

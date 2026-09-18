@@ -1,6 +1,6 @@
 <?php
 /**
- * Article mis en avant.
+ * Featured post.
  *
  * @package techdevblog
  */

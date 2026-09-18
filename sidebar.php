@@ -1,11 +1,11 @@
 <?php
 /**
- * Colonne laterale.
+ * Sidebar.
  *
- * Le contenu de la colonne (A propos, Categories, Newsletter, et tout
- * widget ajoute) est entierement pilote depuis Apparence > Widgets, zone
- * "Colonne laterale". Voir functions.php pour le widget "Categories
- * TechDevBlog" et les habillages de carte fournis par defaut.
+ * The sidebar's content (About, Categories, Newsletter, and any widget
+ * added) is entirely managed from Appearance > Widgets, "Sidebar" area.
+ * See functions.php for the "TechDevBlog Categories" widget and the
+ * default card styling it provides.
  *
  * @package techdevblog
  */

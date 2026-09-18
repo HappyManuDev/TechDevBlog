@@ -1,6 +1,6 @@
 <?php
 /**
- * Modele d'article.
+ * Post template.
  *
  * @package techdevblog
  */
@@ -15,9 +15,9 @@ get_header();
 			while ( have_posts() ) :
 				the_post();
 
-					// Contenu passe par les memes filtres que the_content() (blocs,
-					// shortcodes, embeds...), puis enrichi d'ancres sur les titres
-					// H2/H3 pour alimenter le sommaire ci-dessous.
+					// Content goes through the same filters as the_content() (blocks,
+					// shortcodes, embeds...), then gets anchors added to its H2/H3
+					// headings to feed the table of contents below.
 					$techdevblog_content = get_the_content();
 					$techdevblog_content = apply_filters( 'the_content', $techdevblog_content );
 					$techdevblog_content = str_replace( ']]>', ']]&gt;', $techdevblog_content );
@@ -118,7 +118,7 @@ get_header();
 							[&_a]:text-indigo-600 [&_a]:underline [&_a:hover]:text-indigo-800
 							[&_img]:rounded-xl">
 							<?php
-							echo $techdevblog_toc['content']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- contenu deja passe par le filtre the_content().
+							echo $techdevblog_toc['content']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- content already passed through the the_content() filter.
 
 							wp_link_pages(
 								array(

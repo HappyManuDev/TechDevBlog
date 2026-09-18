@@ -7,9 +7,9 @@
 
 get_header();
 
-// Image de la categorie consultee (plugin "Categories Images"), affichee en
-// fond du bandeau d'archive uniquement si elle est definie pour cette
-// categorie ; sinon le bandeau garde son fond blanc habituel.
+// Image of the category being viewed (plugin "Categories Images"), shown
+// as the archive banner background only if one is set for this category;
+// otherwise the banner keeps its usual white background.
 $techdevblog_archive_image = '';
 if ( is_category() && function_exists( 'z_taxonomy_image_url' ) ) {
 	$techdevblog_archive_image = z_taxonomy_image_url( get_queried_object_id(), 'full' );

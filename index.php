@@ -1,10 +1,10 @@
 <?php
 /**
- * Modele principal : liste des articles.
+ * Main template: post listing.
  *
- * Le premier article de la premiere page est mis en avant en "hero",
- * les suivants sont affiches en grille. On travaille sur la requete
- * principale, ce qui garde la pagination fonctionnelle.
+ * The first post of the first page is featured as a "hero", the rest
+ * are displayed in a grid. This works off the main query, which keeps
+ * pagination functional.
  *
  * @package techdevblog
  */
