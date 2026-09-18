@@ -239,6 +239,23 @@ function techdevblog_front_page_paging( $query ) {
 add_action( 'pre_get_posts', 'techdevblog_front_page_paging' );
 
 /**
+ * Strips the default "Category: /Tag: /Author: ..." prefix WordPress adds
+ * to archive titles.
+ *
+ * archive.php already displays that same context as its own small label
+ * above the title, so keeping WordPress's built-in prefix would repeat it
+ * a second time right below (e.g. "Category" label, then a "Category: Name"
+ * heading).
+ *
+ * @param string $title Archive title.
+ * @return string Archive title without its type prefix.
+ */
+function techdevblog_archive_title( $title ) {
+	return preg_replace( '/^[^:]+:\s*/', '', $title );
+}
+add_filter( 'get_the_archive_title', 'techdevblog_archive_title' );
+
+/**
  * Number of post cards shown below the hero on the homepage.
  *
  * @return int
