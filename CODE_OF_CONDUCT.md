@@ -38,7 +38,7 @@ This Code of Conduct applies within all spaces of this repository (issues, pull 
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by opening an [issue](https://github.com/DonCastor/TechDevBlog/issues) on this repository. For a sensitive report you would rather not make public, you can contact the repository maintainer directly through their GitHub profile ([@DonCastor](https://github.com/DonCastor)).
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by opening an [issue](https://github.com/HappyManuDev/TechDevBlog/issues) on this repository. For a sensitive report you would rather not make public, you can contact the repository maintainer directly through their GitHub profile ([@HappyManuDev](https://github.com/HappyManuDev)).
 
 All complaints will be reviewed and investigated promptly and fairly.
 

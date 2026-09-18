@@ -38,7 +38,7 @@ Ce Code de conduite s'applique à l'ensemble des espaces de ce dépôt (issues, 
 
 ## Application
 
-Les cas de comportement abusif, harcelant ou autrement inacceptable peuvent être signalés en ouvrant une [issue](https://github.com/DonCastor/TechDevBlog/issues) sur ce dépôt. Pour un signalement de nature sensible que vous ne souhaitez pas rendre public, vous pouvez contacter directement le mainteneur du dépôt via son profil GitHub ([@DonCastor](https://github.com/DonCastor)).
+Les cas de comportement abusif, harcelant ou autrement inacceptable peuvent être signalés en ouvrant une [issue](https://github.com/HappyManuDev/TechDevBlog/issues) sur ce dépôt. Pour un signalement de nature sensible que vous ne souhaitez pas rendre public, vous pouvez contacter directement le mainteneur du dépôt via son profil GitHub ([@HappyManuDev](https://github.com/HappyManuDev)).
 
 Toutes les plaintes seront examinées et feront l'objet d'une enquête rapide et équitable.
 
