@@ -62,4 +62,4 @@ Première publication publique du thème.
   causée par `sanitize_html_class()` qui supprimait les espaces d'une classe CSS multiple.
 
 [1.1.0]: https://github.com/HappyManuDev/TechDevBlog/releases/tag/v1.1.0
-[1.0.0]: https://github.com/DonCastor/TechDevBlog/releases/tag/v1.0.0
+[1.0.0]: https://github.com/HappyManuDev/TechDevBlog/releases/tag/v1.0.0

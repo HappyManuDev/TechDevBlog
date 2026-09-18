@@ -58,4 +58,4 @@ First public release of the theme.
   caused by `sanitize_html_class()` stripping spaces from a multi-class CSS attribute.
 
 [1.1.0]: https://github.com/HappyManuDev/TechDevBlog/releases/tag/v1.1.0
-[1.0.0]: https://github.com/DonCastor/TechDevBlog/releases/tag/v1.0.0
+[1.0.0]: https://github.com/HappyManuDev/TechDevBlog/releases/tag/v1.0.0
