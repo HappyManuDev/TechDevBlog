@@ -1,5 +1,5 @@
 /**
- * Menu mobile, panneau de recherche et bouton "haut de page" des articles.
+ * Mobile menu, search panel and "back to top" button on posts.
  */
 ( function () {
 	'use strict';

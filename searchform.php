@@ -1,6 +1,6 @@
 <?php
 /**
- * Formulaire de recherche.
+ * Search form.
  *
  * @package techdevblog
  */

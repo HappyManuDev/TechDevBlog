@@ -1,6 +1,6 @@
 <?php
 /**
- * Modele de resultats de recherche.
+ * Search results template.
  *
  * @package techdevblog
  */
@@ -14,7 +14,7 @@ get_header();
 		<h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
 			<?php
 			printf(
-				/* translators: %s: terme recherche. */
+				/* translators: %s: search term. */
 				esc_html__( 'Résultats pour « %s »', 'techdevblog' ),
 				esc_html( get_search_query() )
 			);

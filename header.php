@@ -1,6 +1,6 @@
 <?php
 /**
- * En-tete du site.
+ * Site header.
  *
  * @package techdevblog
  */

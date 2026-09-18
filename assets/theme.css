@@ -1,7 +1,7 @@
 /*!
- * theme.css - utilitaires compiles pour le theme YAML & Cafe.
- * Genere a partir des classes reellement utilisees dans les modeles PHP.
- * Remplace le CDN Tailwind : aucune dependance externe a l'execution.
+ * theme.css - compiled utilities for the YAML & Cafe theme.
+ * Generated from the classes actually used in the PHP templates.
+ * Replaces the Tailwind CDN: no runtime external dependency.
  */
 *,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e2e8f0}
 html{-webkit-text-size-adjust:100%;line-height:1.5}

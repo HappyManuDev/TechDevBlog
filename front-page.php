@@ -1,20 +1,20 @@
 <?php
 /**
- * Page d'accueil.
+ * Homepage.
  *
- * Ce modele est utilise pour la page d'accueil dans les deux cas de figure
- * (Reglages > Lecture : "Vos derniers articles" ou "Une page statique"), il
- * impose donc toujours la meme mise en page : le premier article de la page
- * en hero, puis exactement techdevblog_home_cards() cartes (6 par defaut) en
- * grille deux colonnes, puis la pagination. Ce motif se repete sur chaque
- * page (le hero de la page 2 est le premier article qui suit ceux de la
- * page 1, etc.) : la grille compte ainsi toujours un nombre pair de cartes.
+ * This template is used for the homepage in both cases (Settings > Reading:
+ * "Your latest posts" or "A static page"), so it always enforces the same
+ * layout: the first post of the page as a hero, then exactly
+ * techdevblog_home_cards() cards (6 by default) in a two-column grid, then
+ * pagination. This pattern repeats on every page (page 2's hero is the
+ * first post following page 1's, etc.): the grid therefore always holds
+ * an even number of cards.
  *
- * Le nombre de cartes ne suit pas Reglages > Lecture : il est fixe par le
- * theme pour respecter la maquette (filtre 'techdevblog_home_cards').
+ * The card count doesn't follow Settings > Reading: it's fixed by the
+ * theme to match the design (filter 'techdevblog_home_cards').
  *
- * Le contenu eventuel de la page statique choisie comme accueil n'est pas
- * affiche ici : c'est la liste des articles qui fait la page d'accueil.
+ * Any content of the static page chosen as the homepage is not displayed
+ * here: the post listing is what makes up the homepage.
  *
  * @package techdevblog
  */
@@ -36,9 +36,9 @@ $techdevblog_home = new WP_Query(
 $techdevblog_items = $techdevblog_home->posts;
 $techdevblog_hero  = null;
 
-// Le premier article de chaque page passe en hero, les techdevblog_home_cards()
-// suivants forment la grille : la grille garde ainsi un nombre pair de cartes
-// sur toutes les pages, pas seulement la premiere.
+// The first post of each page becomes the hero, the following
+// techdevblog_home_cards() posts form the grid: the grid therefore
+// keeps an even number of cards on every page, not just the first.
 if ( ! empty( $techdevblog_items ) ) {
 	$techdevblog_hero  = $techdevblog_items[0];
 	$techdevblog_items = array_slice( $techdevblog_items, 1, techdevblog_home_cards() );
@@ -73,7 +73,7 @@ global $post;
 						<?php
 						echo esc_html(
 							sprintf(
-								/* translators: %s: nombre d'articles. */
+								/* translators: %s: number of posts. */
 								_n( '%s article', '%s articles', (int) $techdevblog_home->found_posts, 'techdevblog' ),
 								number_format_i18n( (int) $techdevblog_home->found_posts )
 							)

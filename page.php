@@ -1,6 +1,6 @@
 <?php
 /**
- * Modele de page.
+ * Page template.
  *
  * @package techdevblog
  */

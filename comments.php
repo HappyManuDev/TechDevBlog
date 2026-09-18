@@ -1,6 +1,6 @@
 <?php
 /**
- * Zone de commentaires.
+ * Comments area.
  *
  * @package techdevblog
  */

@@ -1,6 +1,6 @@
 <?php
 /**
- * Modele 404.
+ * 404 template.
  *
  * @package techdevblog
  */

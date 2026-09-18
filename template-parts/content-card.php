@@ -1,6 +1,6 @@
 <?php
 /**
- * Carte d'article dans la grille.
+ * Post card in the grid.
  *
  * @package techdevblog
  */
