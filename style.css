@@ -474,3 +474,14 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
 .archive-header.has-image .text-indigo-600 { color: #c7d2fe; }
 .archive-header.has-image h1,
 .archive-header.has-image .text-slate-600 { color: #fff; }
+
+/* -------------------------------------------------------------------------
+   Anchor scroll offset for the Jetpack subscribe form (the header's
+   "Subscribe" button links to #subscribe-blog): without this, the sticky
+   nav bar (h-16, 4rem) covers the top of the form when the browser jumps
+   to the anchor, hiding the email field and leaving only the button
+   visible.
+   ---------------------------------------------------------------------- */
+#subscribe-blog {
+  scroll-margin-top: 5rem;
+}

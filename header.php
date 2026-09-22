@@ -74,7 +74,7 @@
 					<button type="button" id="search-toggle" aria-expanded="false" aria-controls="search-panel" class="text-slate-500 hover:text-indigo-600 transition-colors" aria-label="<?php esc_attr_e( 'Rechercher', 'techdevblog' ); ?>">
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
 					</button>
-					<a href="<?php echo esc_url( home_url( '/newsletter/' ) ); ?>" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+					<a href="#subscribe-blog" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
 						<?php esc_html_e( "S'abonner", 'techdevblog' ); ?>
 					</a>
 				</div>
