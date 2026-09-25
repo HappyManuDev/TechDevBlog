@@ -1,5 +1,5 @@
 /**
- * Mobile menu, search panel and "back to top" button on posts.
+ * Mobile menu, search panel, "back to top" button and share links on posts.
  */
 ( function () {
 	'use strict';
@@ -58,6 +58,50 @@
 			backToTop.addEventListener( 'click', function () {
 				var reduceMotion = window.matchMedia( '(prefers-reduced-motion: reduce)' ).matches;
 				window.scrollTo( { top: 0, behavior: reduceMotion ? 'auto' : 'smooth' } );
+			} );
+		}
+
+		var shareLinks = document.getElementById( 'share-links' );
+
+		// Mastodon has no single share URL: every user is on their own
+		// instance. Ask once, then remember the instance for next time.
+		var shareMastodon = document.getElementById( 'share-mastodon' );
+		if ( shareMastodon && shareLinks ) {
+			shareMastodon.addEventListener( 'click', function () {
+				var stored = null;
+				try {
+					stored = window.localStorage.getItem( 'techdevblog-mastodon-instance' );
+				} catch ( e ) {}
+
+				var instance = stored || window.prompt( 'Sur quelle instance Mastodon es-tu ? (ex. mastodon.social)' );
+				if ( ! instance ) {
+					return;
+				}
+				instance = instance.replace( /^https?:\/\//, '' ).replace( /\/.*$/, '' ).trim();
+				if ( ! instance ) {
+					return;
+				}
+
+				try {
+					window.localStorage.setItem( 'techdevblog-mastodon-instance', instance );
+				} catch ( e ) {}
+
+				var text = shareLinks.dataset.title + ' ' + shareLinks.dataset.url;
+				window.open( 'https://' + instance + '/share?text=' + encodeURIComponent( text ), '_blank', 'noopener' );
+			} );
+		}
+
+		var shareCopy = document.getElementById( 'share-copy' );
+		var shareCopyLabel = document.getElementById( 'share-copy-label' );
+		if ( shareCopy && shareCopyLabel && shareLinks && navigator.clipboard ) {
+			var shareCopyDefaultText = shareCopyLabel.textContent;
+			shareCopy.addEventListener( 'click', function () {
+				navigator.clipboard.writeText( shareLinks.dataset.url ).then( function () {
+					shareCopyLabel.textContent = 'Copié !';
+					window.setTimeout( function () {
+						shareCopyLabel.textContent = shareCopyDefaultText;
+					}, 2000 );
+				} );
 			} );
 		}
 	} );
