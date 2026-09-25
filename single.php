@@ -142,6 +142,40 @@ get_header();
 							</div>
 						<?php endif; ?>
 
+						<?php
+						$techdevblog_share_url   = get_permalink();
+						$techdevblog_share_title = get_the_title();
+						?>
+						<div class="mt-10 pt-8 border-t border-slate-100">
+							<span class="block text-sm font-medium text-slate-600 mb-4"><?php esc_html_e( 'Cet article vous a plu ? Partagez-le !', 'techdevblog' ); ?></span>
+							<div class="flex flex-wrap gap-2" id="share-links" data-url="<?php echo esc_url( $techdevblog_share_url ); ?>" data-title="<?php echo esc_attr( $techdevblog_share_title ); ?>">
+								<a href="https://twitter.com/intent/tweet?url=<?php echo rawurlencode( $techdevblog_share_url ); ?>&amp;text=<?php echo rawurlencode( $techdevblog_share_title ); ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 bg-slate-100 hover:bg-indigo-100 hover:text-indigo-700 transition-colors px-3 py-1.5 rounded-full">
+									<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+									X
+								</a>
+								<a href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo rawurlencode( $techdevblog_share_url ); ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 bg-slate-100 hover:bg-indigo-100 hover:text-indigo-700 transition-colors px-3 py-1.5 rounded-full">
+									<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+									LinkedIn
+								</a>
+								<a href="https://wa.me/?text=<?php echo rawurlencode( $techdevblog_share_title . ' ' . $techdevblog_share_url ); ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 bg-slate-100 hover:bg-indigo-100 hover:text-indigo-700 transition-colors px-3 py-1.5 rounded-full">
+									<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+									WhatsApp
+								</a>
+								<button type="button" id="share-mastodon" class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 bg-slate-100 hover:bg-indigo-100 hover:text-indigo-700 transition-colors px-3 py-1.5 rounded-full">
+									<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+									Mastodon
+								</button>
+								<a href="mailto:?subject=<?php echo rawurlencode( $techdevblog_share_title ); ?>&amp;body=<?php echo rawurlencode( $techdevblog_share_url ); ?>" class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 bg-slate-100 hover:bg-indigo-100 hover:text-indigo-700 transition-colors px-3 py-1.5 rounded-full">
+									<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 6-10 7L2 6"></path></svg>
+									Email
+								</a>
+								<button type="button" id="share-copy" class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 bg-slate-100 hover:bg-indigo-100 hover:text-indigo-700 transition-colors px-3 py-1.5 rounded-full">
+									<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+									<span id="share-copy-label"><?php esc_html_e( 'Copier le lien', 'techdevblog' ); ?></span>
+								</button>
+							</div>
+						</div>
+
 						<nav class="mt-14 pt-8 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-start gap-4" aria-label="<?php esc_attr_e( 'Navigation entre articles', 'techdevblog' ); ?>">
 							<div class="w-full sm:w-1/2 sm:pr-4 sm:border-r border-slate-100">
 								<span class="block text-xs uppercase tracking-wider text-slate-400 font-bold mb-1"><?php esc_html_e( 'Article précédent', 'techdevblog' ); ?></span>
