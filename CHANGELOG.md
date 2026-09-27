@@ -16,6 +16,18 @@ and this theme adheres to [Semantic Versioning](https://semver.org/).
   plugin, with a dark gradient overlay for text contrast. Without the plugin (or without an
   image set for the category), the banner falls back to its plain card look — no hard
   dependency on the plugin.
+- Share links on single posts (X, LinkedIn, WhatsApp, Mastodon, email, copy link), shown
+  below the tags. Mastodon has no universal share URL (federated instances), so it prompts
+  once for the reader's instance and remembers it for next time.
+- Footer tagline and single-post share prompt are now editable from
+  **Appearance > Customize > Theme Text**, instead of requiring a template edit. Both keep
+  their current wording by default.
+
+### Fixed
+
+- Comment form checkbox labels (cookie consent, comment/blog subscription) landing on their
+  own line below the checkbox instead of next to it, caused by a generic label style meant
+  for text fields.
 
 ## [1.1.0] - 2026-09-15
 

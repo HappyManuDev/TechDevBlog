@@ -84,7 +84,7 @@
 			</div>
 		</div>
 		<div class="text-sm flex flex-col md:flex-row justify-between items-center gap-2">
-			<p>&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>. <?php esc_html_e( 'Aucun tracker, aucune publicité.', 'techdevblog' ); ?></p>
+			<p>&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>. <?php echo esc_html( get_theme_mod( 'techdevblog_footer_tagline', __( 'Aucun tracker, aucune publicité.', 'techdevblog' ) ) ); ?></p>
 			<p><?php esc_html_e( 'Propulsé par WordPress', 'techdevblog' ); ?></p>
 		</div>
 	</div>

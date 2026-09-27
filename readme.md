@@ -9,7 +9,7 @@ A modern, responsive, reading-focused WordPress theme for a tech blog, powered b
 ## Features
 
 - **Homepage**: latest post as a hero, followed by a card grid (6 by default, filterable via `techdevblog_home_cards`), with pagination. The pattern repeats on every page.
-- **Single post**: automatic, collapsible table of contents generated from H2/H3 headings, estimated reading time, category breadcrumbs, tags, previous/next post navigation, threaded comments.
+- **Single post**: automatic, collapsible table of contents generated from H2/H3 headings, estimated reading time, category breadcrumbs, tags, share links (X, LinkedIn, WhatsApp, Mastodon, email, copy link), previous/next post navigation, threaded comments.
 - **Sidebar managed from Appearance > Widgets**: built-in **TechDevBlog Categories** widget (dynamic counts) to combine with custom HTML blocks (e.g. "About", "Don't miss out").
 - **Header**: custom logo, responsive primary menu with a mobile menu, dropdown search panel.
 - **Footer**: dedicated menu, category list, social links, credits.
@@ -35,12 +35,14 @@ techdevblog/
 2. Activate the theme from Appearance > Themes.
 3. In Appearance > Widgets, add the **TechDevBlog Categories** widget to the sidebar, along with custom HTML blocks for "About" and "Don't miss out".
 4. (Optional) Create the **Primary Menu** and **Footer Menu** in Appearance > Menus.
+5. (Optional) In **Appearance > Customize > Theme Text**, edit the footer tagline and the share prompt shown on single posts — no code editing needed, both keep their current wording by default.
 
 ## Requirements
 
 - WordPress 6.0 or higher
 - PHP 7.4 or higher
 - (Optional) [Categories Images](https://wordpress.org/plugins/categories-images/) plugin, to set an image per category and have it displayed on that category's archive banner (`archive.php` calls `z_taxonomy_image_url()` only if the plugin is active, so the theme works without it).
+- No plugin needed for the footer tagline / share prompt text: they're editable directly from the Customizer (see Installation above).
 
 ## Development
 

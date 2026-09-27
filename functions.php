@@ -71,6 +71,58 @@ function techdevblog_content_width() {
 add_action( 'after_setup_theme', 'techdevblog_content_width', 0 );
 
 /**
+ * Registers theme text settings in the Customizer, so a site owner can
+ * change a couple of hardcoded UI strings (footer tagline, share prompt)
+ * from Appearance > Customize instead of editing template files.
+ *
+ * @param WP_Customize_Manager $wp_customize Customizer manager.
+ */
+function techdevblog_customize_register( $wp_customize ) {
+	$wp_customize->add_section(
+		'techdevblog_text',
+		array(
+			'title'    => __( 'Textes du thème', 'techdevblog' ),
+			'priority' => 160,
+		)
+	);
+
+	$wp_customize->add_setting(
+		'techdevblog_footer_tagline',
+		array(
+			'default'           => __( 'Aucun tracker, aucune publicité.', 'techdevblog' ),
+			'sanitize_callback' => 'sanitize_text_field',
+			'transport'         => 'refresh',
+		)
+	);
+	$wp_customize->add_control(
+		'techdevblog_footer_tagline',
+		array(
+			'section' => 'techdevblog_text',
+			'label'   => __( 'Accroche du pied de page', 'techdevblog' ),
+			'type'    => 'text',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'techdevblog_share_prompt',
+		array(
+			'default'           => __( 'Cet article vous a plu ? Partagez-le !', 'techdevblog' ),
+			'sanitize_callback' => 'sanitize_text_field',
+			'transport'         => 'refresh',
+		)
+	);
+	$wp_customize->add_control(
+		'techdevblog_share_prompt',
+		array(
+			'section' => 'techdevblog_text',
+			'label'   => __( 'Invitation au partage (page d\'article)', 'techdevblog' ),
+			'type'    => 'text',
+		)
+	);
+}
+add_action( 'customize_register', 'techdevblog_customize_register' );
+
+/**
  * Sidebar widget area.
  *
  * Each widget carries its own card styling (see the "TechDevBlog

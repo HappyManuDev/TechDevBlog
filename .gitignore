@@ -16,3 +16,6 @@ desktop.ini
 # Fichiers envoyes par Claude en cours de discussion (apercus, maquettes...) :
 # ne font pas partie du theme, pas besoin de les versionner.
 Claude outputs/
+
+# Notes internes pour Claude Code, propres a cette machine.
+CLAUDE.md

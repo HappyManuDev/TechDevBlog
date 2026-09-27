@@ -147,7 +147,7 @@ get_header();
 						$techdevblog_share_title = get_the_title();
 						?>
 						<div class="mt-10 pt-8 border-t border-slate-100">
-							<span class="block text-sm font-medium text-slate-600 mb-4"><?php esc_html_e( 'Cet article vous a plu ? Partagez-le !', 'techdevblog' ); ?></span>
+							<span class="block text-sm font-medium text-slate-600 mb-4"><?php echo esc_html( get_theme_mod( 'techdevblog_share_prompt', __( 'Cet article vous a plu ? Partagez-le !', 'techdevblog' ) ) ); ?></span>
 							<div class="flex flex-wrap gap-2" id="share-links" data-url="<?php echo esc_url( $techdevblog_share_url ); ?>" data-title="<?php echo esc_attr( $techdevblog_share_title ); ?>">
 								<a href="https://twitter.com/intent/tweet?url=<?php echo rawurlencode( $techdevblog_share_url ); ?>&amp;text=<?php echo rawurlencode( $techdevblog_share_title ); ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 bg-slate-100 hover:bg-indigo-100 hover:text-indigo-700 transition-colors px-3 py-1.5 rounded-full">
 									<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>

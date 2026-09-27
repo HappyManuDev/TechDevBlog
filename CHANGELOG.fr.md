@@ -17,6 +17,18 @@ et le thème suit le [Semantic Versioning](https://semver.org/lang/fr/).
   en dégradé pour garder le texte lisible. Sans le plugin (ou sans image définie pour la
   catégorie), le bandeau garde son allure de carte simple — aucune dépendance obligatoire
   au plugin.
+- Liens de partage sur la page d'un article (X, LinkedIn, WhatsApp, Mastodon, email, copier
+  le lien), affichés sous les étiquettes. Mastodon n'a pas d'URL de partage universelle
+  (instances fédérées) : le bouton demande l'instance une seule fois puis la mémorise.
+- L'accroche du pied de page et l'invitation au partage sur la page d'un article se modifient
+  désormais depuis **Apparence > Personnaliser > Textes du thème**, sans passer par un
+  fichier de code. Les deux gardent leur texte actuel par défaut.
+
+### Corrigé
+
+- Libellés des cases à cocher du formulaire de commentaire (consentement cookies,
+  abonnement commentaires/articles) qui atterrissaient sur leur propre ligne sous la case
+  au lieu de rester à côté, à cause d'un style de label générique pensé pour les champs texte.
 
 ## [1.1.0] - 2026-09-15
 

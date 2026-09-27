@@ -9,7 +9,7 @@ Un thème WordPress moderne, responsive et orienté lecture pour un blog technol
 ## Fonctionnalités
 
 - **Page d'accueil** : dernier article en hero, puis une grille de cartes (6 par défaut, filtrable via `techdevblog_home_cards`), avec pagination. Ce motif se répète sur chaque page.
-- **Article** : sommaire automatique et repliable généré à partir des titres H2/H3, temps de lecture estimé, fil d'Ariane par catégories, étiquettes, navigation article précédent/suivant, commentaires imbriqués.
+- **Article** : sommaire automatique et repliable généré à partir des titres H2/H3, temps de lecture estimé, fil d'Ariane par catégories, étiquettes, liens de partage (X, LinkedIn, WhatsApp, Mastodon, email, copier le lien), navigation article précédent/suivant, commentaires imbriqués.
 - **Colonne latérale pilotable depuis Apparence > Widgets** : widget natif **Catégories TechDevBlog** (compteurs dynamiques) à combiner avec des blocs HTML personnalisé (ex. « À propos », « Ne manquez rien »).
 - **En-tête** : logo personnalisé, menu principal responsive avec menu mobile, recherche en volet déroulant.
 - **Pied de page** : menu dédié, liste des catégories, liens réseaux sociaux, mentions.
@@ -35,12 +35,14 @@ techdevblog/
 2. Activer le thème depuis Apparence > Thèmes.
 3. Dans Apparence > Widgets, ajouter à la colonne latérale le widget **Catégories TechDevBlog** ainsi que des blocs HTML personnalisé pour « À propos » et « Ne manquez rien ».
 4. (Optionnel) Créer les menus **Menu Principal** et **Menu Pied de Page** dans Apparence > Menus.
+5. (Optionnel) Dans **Apparence > Personnaliser > Textes du thème**, modifier l'accroche du pied de page et l'invitation au partage affichée sur la page d'un article — aucune modification de code nécessaire, les deux gardent leur texte actuel par défaut.
 
 ## Prérequis
 
 - WordPress 6.0 ou supérieur
 - PHP 7.4 ou supérieur
 - (Optionnel) Le plugin [Categories Images](https://wordpress.org/plugins/categories-images/), pour définir une image par catégorie et l'afficher sur le bandeau d'archive de cette catégorie (`archive.php` n'appelle `z_taxonomy_image_url()` que si le plugin est actif, le thème fonctionne donc sans).
+- Aucun plugin nécessaire pour l'accroche du pied de page / l'invitation au partage : ces textes se modifient directement depuis le Personnaliseur (voir Installation ci-dessus).
 
 ## Développement
 
