@@ -562,7 +562,7 @@ function techdevblog_comment( $comment, $args, $depth ) {
 				<?php if ( '0' === $comment->comment_approved ) : ?>
 					<p class="text-xs text-amber-600 mb-2"><?php esc_html_e( 'Votre commentaire est en attente de modération.', 'techdevblog' ); ?></p>
 				<?php endif; ?>
-				<div class="text-slate-600 text-sm leading-relaxed mb-2 [&>p]:mb-2">
+				<div class="text-slate-600 text-sm leading-relaxed mb-2 [&>p]:mb-2 [&_a]:text-indigo-600 [&_a]:underline [&_a:hover]:text-indigo-800">
 					<?php comment_text(); ?>
 				</div>
 				<?php
