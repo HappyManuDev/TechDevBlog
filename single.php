@@ -24,7 +24,7 @@ get_header();
 					$techdevblog_toc     = techdevblog_prepare_content_with_toc( $techdevblog_content );
 				?>
 				<article <?php post_class( 'bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden' ); ?>>
-					<div class="p-8 md:p-10">
+					<div class="p-5 sm:p-8 md:p-10">
 						<header class="mb-8">
 							<?php
 							$techdevblog_cats = get_the_category();
@@ -39,7 +39,7 @@ get_header();
 								</div>
 							<?php endif; ?>
 
-							<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight text-balance">
+							<h1 class="text-[26px] sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight text-balance">
 								<?php the_title(); ?>
 							</h1>
 
@@ -109,7 +109,7 @@ get_header();
 							</details>
 						<?php endif; ?>
 
-						<div class="entry-content text-slate-700 text-lg leading-relaxed
+						<div class="entry-content text-slate-700 text-[17px] sm:text-lg leading-relaxed
 							[&>p]:mb-6
 							[&>h2]:text-2xl [&>h2]:font-bold [&>h2]:mb-4 [&>h2]:mt-10 [&>h2]:text-slate-900
 							[&>h3]:text-xl [&>h3]:font-bold [&>h3]:mb-3 [&>h3]:mt-8 [&>h3]:text-slate-900
@@ -191,7 +191,7 @@ get_header();
 
 				<?php
 				if ( comments_open() || get_comments_number() ) {
-					echo '<div class="mt-8 bg-white p-8 rounded-2xl shadow-sm border border-slate-100">';
+					echo '<div class="mt-8 bg-white p-5 sm:p-8 rounded-2xl shadow-sm border border-slate-100">';
 					comments_template();
 					echo '</div>';
 				}

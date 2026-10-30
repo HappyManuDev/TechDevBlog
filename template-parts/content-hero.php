@@ -13,13 +13,13 @@
 		the_post_thumbnail(
 			'full',
 			array(
-				'class' => 'w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105',
+				'class' => 'w-full h-[380px] md:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105',
 				'alt'   => the_title_attribute( array( 'echo' => false ) ),
 			)
 		);
 		?>
 	<?php else : ?>
-		<div class="w-full h-[500px] bg-slate-800"></div>
+		<div class="w-full h-[380px] md:h-[500px] bg-slate-800"></div>
 	<?php endif; ?>
 
 	<div class="absolute bottom-0 left-0 right-0 p-6 md:p-10 z-20">
@@ -43,7 +43,7 @@
 			</div>
 		<?php endif; ?>
 
-		<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight text-balance">
+		<h2 class="text-[26px] sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight text-balance">
 			<?php the_title(); ?>
 		</h2>
 

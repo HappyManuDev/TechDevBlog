@@ -24,11 +24,26 @@ et le thème suit le [Semantic Versioning](https://semver.org/lang/fr/).
   désormais depuis **Apparence > Personnaliser > Textes du thème**, sans passer par un
   fichier de code. Les deux gardent leur texte actuel par défaut.
 
+### Modifié
+
+- Confort de lecture sur mobile des articles et des pages : marges intérieures réduites et
+  texte en 17 px sur téléphone (18 px à partir de 640 px), ce qui élargit les lignes
+  d'environ 30 à 40 caractères sur un écran de 375 px. Les titres des articles et des pages,
+  ainsi que celui de l'article mis en avant sur l'accueil, passent à 26 px sur téléphone.
+- Les tableaux des articles utilisent un texte et des marges de cellule plus petits sur
+  téléphone, pour que les cellules ne se coupent plus sur 2 ou 3 lignes.
+- L'article mis en avant (hero) de l'accueil fait 380 px de haut sur téléphone au lieu de
+  500 px : la grille d'articles commence plus haut à l'écran.
+
 ### Corrigé
 
 - Libellés des cases à cocher du formulaire de commentaire (consentement cookies,
   abonnement commentaires/articles) qui atterrissaient sur leur propre ligne sous la case
   au lieu de rester à côté, à cause d'un style de label générique pensé pour les champs texte.
+- `leading-relaxed` / `leading-tight` sans effet lorsqu'ils étaient combinés à une classe de
+  taille de texte (corps des articles, titres, texte des commentaires), car leurs règles
+  précédaient celles des tailles de texte dans `assets/theme.css` — l'inverse de l'ordre de
+  Tailwind.
 
 ## [1.1.0] - 2026-09-15
 

@@ -23,11 +23,24 @@ and this theme adheres to [Semantic Versioning](https://semver.org/).
   **Appearance > Customize > Theme Text**, instead of requiring a template edit. Both keep
   their current wording by default.
 
+### Changed
+
+- Mobile reading comfort on posts and pages: tighter card padding and 17px body text on
+  phones (18px from 640px up), widening lines from ~30 to ~40 characters on a 375px screen.
+  Post/page titles and the homepage featured post title drop to 26px on phones.
+- Tables inside posts use smaller text and cell padding on phones, so cells no longer break
+  over 2–3 lines.
+- Homepage featured post (hero) is 380px tall on phones instead of 500px, so the post grid
+  starts closer to the top of the screen.
+
 ### Fixed
 
 - Comment form checkbox labels (cookie consent, comment/blog subscription) landing on their
   own line below the checkbox instead of next to it, caused by a generic label style meant
   for text fields.
+- `leading-relaxed` / `leading-tight` having no effect when combined with a text size class
+  (post body, titles, comment text), because their rules came before the text size rules in
+  `assets/theme.css` — the opposite of Tailwind's order.
 
 ## [1.1.0] - 2026-09-15
 

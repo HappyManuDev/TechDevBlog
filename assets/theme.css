@@ -126,6 +126,7 @@ main{display:block}
 .h-16{height:4rem}
 .h-48{height:12rem}
 .h-8{height:2rem}
+.h-\[380px\]{height:380px}
 .h-\[500px\]{height:500px}
 .h-auto{height:auto}
 .h-full{height:100%}
@@ -147,8 +148,6 @@ main{display:block}
 .items-start{align-items:flex-start}
 .justify-between{justify-content:space-between}
 .justify-center{justify-content:center}
-.leading-relaxed{line-height:1.625}
-.leading-tight{line-height:1.25}
 .left-0{left:0}
 .left-4{left:1rem}
 .line-clamp-2{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}
@@ -179,6 +178,7 @@ main{display:block}
 .mx-auto{margin-left:auto;margin-right:auto}
 .object-cover{object-fit:cover}
 .overflow-hidden{overflow:hidden}
+.p-5{padding:1.25rem}
 .p-6{padding:1.5rem}
 .p-8{padding:2rem}
 .pb-3{padding-bottom:.75rem}
@@ -223,6 +223,8 @@ main{display:block}
 .text-2xl{font-size:1.5rem;line-height:2rem}
 .text-3xl{font-size:1.875rem;line-height:2.25rem}
 .text-7xl{font-size:4.5rem;line-height:1}
+.text-\[17px\]{font-size:17px}
+.text-\[26px\]{font-size:26px}
 .text-amber-600{color:#d97706}
 .text-balance{text-wrap:balance}
 .text-center{text-align:center}
@@ -243,6 +245,8 @@ main{display:block}
 .text-white{color:#fff}
 .text-xl{font-size:1.25rem;line-height:1.75rem}
 .text-xs{font-size:.75rem;line-height:1rem}
+.leading-relaxed{line-height:1.625}
+.leading-tight{line-height:1.25}
 .top-0{top:0}
 .top-4{top:1rem}
 .tracking-tight{letter-spacing:-.025em}
@@ -261,10 +265,13 @@ main{display:block}
 @media (min-width:640px){
 .sm\:border-r{border-right-width:1px;border-right-style:solid}
 .sm\:flex-row{flex-direction:row}
+.sm\:p-8{padding:2rem}
 .sm\:pl-4{padding-left:1rem}
 .sm\:pr-4{padding-right:1rem}
 .sm\:px-3{padding-left:.75rem;padding-right:.75rem}
 .sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}
+.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}
+.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}
 .sm\:text-right{text-align:right}
 .sm\:w-1\/2{width:50%}
 }
@@ -277,6 +284,7 @@ main{display:block}
 .md\:flex-row{flex-direction:row}
 .md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.md\:h-\[500px\]{height:500px}
 .md\:hidden{display:none}
 .md\:p-10{padding:2.5rem}
 .md\:pl-6{padding-left:1.5rem}
