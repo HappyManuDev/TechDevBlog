@@ -31,9 +31,11 @@ et le thème suit le [Semantic Versioning](https://semver.org/lang/fr/).
   d'environ 30 à 40 caractères sur un écran de 375 px. Les titres des articles et des pages,
   ainsi que celui de l'article mis en avant sur l'accueil, passent à 26 px sur téléphone.
 - Les tableaux des articles utilisent un texte et des marges de cellule plus petits sur
-  téléphone, pour que les cellules ne se coupent plus sur 2 ou 3 lignes.
+  téléphone, pour que les cellules ne se coupent plus sur 2 ou 3 lignes. Une taille de texte
+  choisie pour un bloc Tableau dans l'éditeur reste prioritaire.
 - L'article mis en avant (hero) de l'accueil fait 380 px de haut sur téléphone au lieu de
-  500 px : la grille d'articles commence plus haut à l'écran.
+  500 px : la grille d'articles commence plus haut à l'écran. Pour que son texte tienne dans
+  cette hauteur, le titre est limité à 3 lignes et l'extrait passe à 16 px sur téléphone.
 
 ### Corrigé
 
@@ -43,7 +45,8 @@ et le thème suit le [Semantic Versioning](https://semver.org/lang/fr/).
 - `leading-relaxed` / `leading-tight` sans effet lorsqu'ils étaient combinés à une classe de
   taille de texte (corps des articles, titres, texte des commentaires), car leurs règles
   précédaient celles des tailles de texte dans `assets/theme.css` — l'inverse de l'ordre de
-  Tailwind.
+  Tailwind. Le corps des articles et les titres gardent désormais cet interligne sur toutes
+  les largeurs d'écran, au lieu que chaque taille de texte responsive le réinitialise.
 
 ## [1.1.0] - 2026-09-15
 

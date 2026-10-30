@@ -29,9 +29,10 @@ and this theme adheres to [Semantic Versioning](https://semver.org/).
   phones (18px from 640px up), widening lines from ~30 to ~40 characters on a 375px screen.
   Post/page titles and the homepage featured post title drop to 26px on phones.
 - Tables inside posts use smaller text and cell padding on phones, so cells no longer break
-  over 2–3 lines.
+  over 2–3 lines. A text size picked for a Table block in the editor still takes precedence.
 - Homepage featured post (hero) is 380px tall on phones instead of 500px, so the post grid
-  starts closer to the top of the screen.
+  starts closer to the top of the screen. To keep its caption inside that height, the title
+  is capped at 3 lines and the excerpt drops to 16px on phones.
 
 ### Fixed
 
@@ -40,7 +41,8 @@ and this theme adheres to [Semantic Versioning](https://semver.org/).
   for text fields.
 - `leading-relaxed` / `leading-tight` having no effect when combined with a text size class
   (post body, titles, comment text), because their rules came before the text size rules in
-  `assets/theme.css` — the opposite of Tailwind's order.
+  `assets/theme.css` — the opposite of Tailwind's order. Post body and titles now also keep
+  that line height at every screen width, instead of each responsive text size resetting it.
 
 ## [1.1.0] - 2026-09-15
 

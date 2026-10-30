@@ -43,11 +43,11 @@
 			</div>
 		<?php endif; ?>
 
-		<h2 class="text-[26px] sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight text-balance">
+		<h2 class="text-[26px] sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight sm:leading-tight md:leading-tight lg:leading-tight text-balance line-clamp-3 md:line-clamp-none">
 			<?php the_title(); ?>
 		</h2>
 
-		<p class="text-slate-200 text-lg mb-6 max-w-3xl line-clamp-2">
+		<p class="text-slate-200 text-base sm:text-lg mb-4 sm:mb-6 max-w-3xl line-clamp-2">
 			<?php echo esc_html( wp_strip_all_tags( techdevblog_strip_reading_time_badge( get_the_excerpt() ) ) ); ?>
 		</p>
 

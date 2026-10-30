@@ -39,7 +39,7 @@ get_header();
 								</div>
 							<?php endif; ?>
 
-							<h1 class="text-[26px] sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight text-balance">
+							<h1 class="text-[26px] sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight sm:leading-tight md:leading-tight lg:leading-tight text-balance">
 								<?php the_title(); ?>
 							</h1>
 
@@ -109,7 +109,7 @@ get_header();
 							</details>
 						<?php endif; ?>
 
-						<div class="entry-content text-slate-700 text-[17px] sm:text-lg leading-relaxed
+						<div class="entry-content text-slate-700 text-[17px] sm:text-lg leading-relaxed sm:leading-relaxed
 							[&>p]:mb-6
 							[&>h2]:text-2xl [&>h2]:font-bold [&>h2]:mb-4 [&>h2]:mt-10 [&>h2]:text-slate-900
 							[&>h3]:text-xl [&>h3]:font-bold [&>h3]:mb-3 [&>h3]:mt-8 [&>h3]:text-slate-900
