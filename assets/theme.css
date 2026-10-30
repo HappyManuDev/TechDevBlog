@@ -179,7 +179,6 @@ main{display:block}
 .overflow-hidden{overflow:hidden}
 .p-5{padding:1.25rem}
 .p-6{padding:1.5rem}
-.p-8{padding:2rem}
 .pb-3{padding-bottom:.75rem}
 .pb-4{padding-bottom:1rem}
 .pb-6{padding-bottom:1.5rem}
@@ -226,7 +225,6 @@ main{display:block}
 .text-\[26px\]{font-size:26px}
 .text-amber-600{color:#d97706}
 .text-balance{text-wrap:balance}
-.text-base{font-size:1rem;line-height:1.5rem}
 .text-center{text-align:center}
 .text-indigo-100{color:#e0e7ff}
 .text-indigo-200{color:#c7d2fe}
