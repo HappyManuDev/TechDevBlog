@@ -15,17 +15,26 @@ et le thème suit le [Semantic Versioning](https://semver.org/lang/fr/).
   lorsqu'elle est définie via le plugin optionnel
   [Categories Images](https://wordpress.org/plugins/categories-images/), avec un voile sombre
   en dégradé pour garder le texte lisible. Sans le plugin (ou sans image définie pour la
-  catégorie), le bandeau garde son allure de carte simple — aucune dépendance obligatoire
-  au plugin.
+  catégorie), le bandeau s'affiche comme une simple carte blanche — aucune dépendance
+  obligatoire au plugin.
 - Liens de partage sur la page d'un article (X, LinkedIn, WhatsApp, Mastodon, email, copier
   le lien), affichés sous les étiquettes. Mastodon n'a pas d'URL de partage universelle
-  (instances fédérées) : le bouton demande l'instance une seule fois puis la mémorise.
+  (instances fédérées) : le bouton demande l'instance du lecteur, préremplie avec la
+  dernière utilisée, pour la confirmer d'un simple « OK » ou en changer. Le bouton de copie
+  est masqué sur les navigateurs sans accès au presse-papiers.
 - L'accroche du pied de page et l'invitation au partage sur la page d'un article se modifient
   désormais depuis **Apparence > Personnaliser > Textes du thème**, sans passer par un
   fichier de code. Les deux gardent leur texte actuel par défaut.
 
 ### Modifié
 
+- Les pages d'archive (catégorie, étiquette, auteur, date) s'ouvrent désormais sur un
+  en-tête en carte blanche aux coins arrondis, au lieu d'un simple filet en bas.
+- Les titres d'archive ne répètent plus le préfixe « Catégorie : » / « Étiquette : » /
+  « Auteur : » ajouté par WordPress, puisque le petit libellé au-dessus du titre l'indique
+  déjà.
+- Le bouton « S'abonner » de l'en-tête mène désormais au formulaire d'abonnement Jetpack de
+  la barre latérale, au lieu d'une page `/newsletter/` qui n'existait pas.
 - Confort de lecture sur mobile des articles et des pages : marges intérieures réduites et
   texte en 17 px sur téléphone (18 px à partir de 640 px), ce qui élargit les lignes
   d'environ 30 à 40 caractères sur un écran de 375 px. Les titres des articles et des pages,
@@ -39,6 +48,8 @@ et le thème suit le [Semantic Versioning](https://semver.org/lang/fr/).
 
 ### Corrigé
 
+- Liens dans les commentaires qui ressemblaient à du texte normal (même gris, pas de
+  soulignement) ; ils reprennent désormais le style des liens des articles.
 - Libellés des cases à cocher du formulaire de commentaire (consentement cookies,
   abonnement commentaires/articles) qui atterrissaient sur leur propre ligne sous la case
   au lieu de rester à côté, à cause d'un style de label générique pensé pour les champs texte.

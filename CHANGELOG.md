@@ -14,17 +14,24 @@ and this theme adheres to [Semantic Versioning](https://semver.org/).
 - Category archive banner now displays that category's image as a background when one is
   set via the optional [Categories Images](https://wordpress.org/plugins/categories-images/)
   plugin, with a dark gradient overlay for text contrast. Without the plugin (or without an
-  image set for the category), the banner falls back to its plain card look — no hard
+  image set for the category), the banner falls back to a plain white card — no hard
   dependency on the plugin.
 - Share links on single posts (X, LinkedIn, WhatsApp, Mastodon, email, copy link), shown
-  below the tags. Mastodon has no universal share URL (federated instances), so it prompts
-  once for the reader's instance and remembers it for next time.
+  below the tags. Mastodon has no universal share URL (federated instances), so it asks for
+  the reader's instance, pre-filled with the last one used so a single "OK" confirms it or
+  it can be changed. The copy button is hidden on browsers without clipboard access.
 - Footer tagline and single-post share prompt are now editable from
   **Appearance > Customize > Theme Text**, instead of requiring a template edit. Both keep
   their current wording by default.
 
 ### Changed
 
+- Archive pages (category, tag, author, date) now open with a white rounded card header
+  instead of a plain bottom border.
+- Archive titles no longer repeat WordPress's "Category:" / "Tag:" / "Author:" prefix, since
+  the small label above the title already says it.
+- The header's "S'abonner" button now jumps to the Jetpack subscribe form in the sidebar,
+  instead of linking to a placeholder `/newsletter/` page.
 - Mobile reading comfort on posts and pages: tighter card padding and 17px body text on
   phones (18px from 640px up), widening lines from ~30 to ~40 characters on a 375px screen.
   Post/page titles and the homepage featured post title drop to 26px on phones.
@@ -36,6 +43,8 @@ and this theme adheres to [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
+- Links inside comments looking like plain text (same gray color, no underline); they now
+  use the same link style as post content.
 - Comment form checkbox labels (cookie consent, comment/blog subscription) landing on their
   own line below the checkbox instead of next to it, caused by a generic label style meant
   for text fields.
