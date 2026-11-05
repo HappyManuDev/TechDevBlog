@@ -4,6 +4,49 @@
 ( function () {
 	'use strict';
 
+	var MASTODON_STORAGE_KEY = 'techdevblog-mastodon-instance';
+	var COPY_FEEDBACK_MS = 2000;
+	// Bare host name: labels of letters/digits/hyphens, at least one dot.
+	var HOSTNAME_PATTERN = /^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)+$/;
+
+	/**
+	 * Turn whatever the reader typed into a bare Mastodon host name.
+	 *
+	 * Accepts "mastodon.social", "https://mastodon.social/home" or a full
+	 * handle like "@me@mastodon.social".
+	 *
+	 * @param {?string} raw Reader input or previously stored value.
+	 * @return {string} Lowercase host name, or '' if it is not a valid one.
+	 */
+	function normalizeMastodonInstance( raw ) {
+		if ( ! raw ) {
+			return '';
+		}
+		var instance = String( raw ).trim().toLowerCase()
+			.replace( /^https?:\/\//, '' )
+			.replace( /[\/?#].*$/, '' );
+		// A handle ("@user@host" or "user@host"): the host is after the last "@".
+		instance = instance.slice( instance.lastIndexOf( '@' ) + 1 );
+		return HOSTNAME_PATTERN.test( instance ) ? instance : '';
+	}
+
+	function readStoredMastodonInstance() {
+		try {
+			return window.localStorage.getItem( MASTODON_STORAGE_KEY );
+		} catch ( e ) {
+			// Storage blocked (private mode, browser settings): behave as if nothing was saved.
+			return null;
+		}
+	}
+
+	function storeMastodonInstance( instance ) {
+		try {
+			window.localStorage.setItem( MASTODON_STORAGE_KEY, instance );
+		} catch ( e ) {
+			// Storage blocked: the reader will simply be asked again next time.
+		}
+	}
+
 	function toggle( btn, panel, onToggle ) {
 		if ( ! btn || ! panel ) {
 			return;
@@ -64,27 +107,27 @@
 		var shareLinks = document.getElementById( 'share-links' );
 
 		// Mastodon has no single share URL: every user is on their own
-		// instance. Ask once, then remember the instance for next time.
+		// instance. Always ask, pre-filled with the last instance used, so a
+		// single "OK" confirms it and a typo can still be fixed (no hidden
+		// shortcut, which touch screens could not use anyway).
 		var shareMastodon = document.getElementById( 'share-mastodon' );
 		if ( shareMastodon && shareLinks ) {
 			shareMastodon.addEventListener( 'click', function () {
-				var stored = null;
-				try {
-					stored = window.localStorage.getItem( 'techdevblog-mastodon-instance' );
-				} catch ( e ) {}
-
-				var instance = stored || window.prompt( 'Sur quelle instance Mastodon es-tu ? (ex. mastodon.social)' );
-				if ( ! instance ) {
+				// An invalid saved value (e.g. from an older version) normalizes to '' and is not offered.
+				var storedInstance = normalizeMastodonInstance( readStoredMastodonInstance() );
+				var answer = window.prompt(
+					'Sur quelle instance Mastodon êtes-vous ? (ex. mastodon.social)',
+					storedInstance
+				);
+				if ( answer === null || answer.trim() === '' ) {
 					return;
 				}
-				instance = instance.replace( /^https?:\/\//, '' ).replace( /\/.*$/, '' ).trim();
+				var instance = normalizeMastodonInstance( answer );
 				if ( ! instance ) {
+					window.alert( 'Adresse d’instance invalide. Indiquez par exemple « mastodon.social ».' );
 					return;
 				}
-
-				try {
-					window.localStorage.setItem( 'techdevblog-mastodon-instance', instance );
-				} catch ( e ) {}
+				storeMastodonInstance( instance );
 
 				var text = shareLinks.dataset.title + ' ' + shareLinks.dataset.url;
 				window.open( 'https://' + instance + '/share?text=' + encodeURIComponent( text ), '_blank', 'noopener' );
@@ -93,14 +136,26 @@
 
 		var shareCopy = document.getElementById( 'share-copy' );
 		var shareCopyLabel = document.getElementById( 'share-copy-label' );
-		if ( shareCopy && shareCopyLabel && shareLinks && navigator.clipboard ) {
+		if ( shareCopy && ! ( navigator.clipboard && navigator.clipboard.writeText ) ) {
+			// Clipboard API missing (old browser, or page not served over HTTPS):
+			// remove the button rather than leave one that does nothing.
+			shareCopy.parentNode.removeChild( shareCopy );
+		} else if ( shareCopy && shareCopyLabel && shareLinks ) {
 			var shareCopyDefaultText = shareCopyLabel.textContent;
+			var shareCopyResetTimer = null;
+			var showCopyFeedback = function ( message ) {
+				shareCopyLabel.textContent = message;
+				window.clearTimeout( shareCopyResetTimer );
+				shareCopyResetTimer = window.setTimeout( function () {
+					shareCopyLabel.textContent = shareCopyDefaultText;
+				}, COPY_FEEDBACK_MS );
+			};
 			shareCopy.addEventListener( 'click', function () {
 				navigator.clipboard.writeText( shareLinks.dataset.url ).then( function () {
-					shareCopyLabel.textContent = 'Copié !';
-					window.setTimeout( function () {
-						shareCopyLabel.textContent = shareCopyDefaultText;
-					}, 2000 );
+					showCopyFeedback( 'Copié !' );
+				}, function () {
+					// Denied permission or unfocused document.
+					showCopyFeedback( 'Copie impossible' );
 				} );
 			} );
 		}
