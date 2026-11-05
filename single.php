@@ -144,7 +144,9 @@ get_header();
 
 						<?php
 						$techdevblog_share_url   = get_permalink();
-						$techdevblog_share_title = get_the_title();
+						// get_the_title() is already texturized (&rsquo;, &#8217;...): decode it to plain
+						// text so share URLs carry real characters, not literal entity names.
+						$techdevblog_share_title = html_entity_decode( wp_strip_all_tags( get_the_title() ), ENT_QUOTES, 'UTF-8' );
 						?>
 						<div class="mt-10 pt-8 border-t border-slate-100">
 							<span class="block text-sm font-medium text-slate-600 mb-4"><?php echo esc_html( get_theme_mod( 'techdevblog_share_prompt', __( 'Cet article vous a plu ? Partagez-le !', 'techdevblog' ) ) ); ?></span>
